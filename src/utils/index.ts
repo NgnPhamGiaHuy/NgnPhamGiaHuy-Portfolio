@@ -1,0 +1,1 @@
+export { default as handleDownloadCV } from "@/utils/handleDownloadCV";

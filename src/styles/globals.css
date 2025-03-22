@@ -1,0 +1,96 @@
+@import "tailwindcss";
+@plugin "./plugin/custom.ts";
+@plugin "@tailwindcss/aspect-ratio";
+
+:root {
+    --background: #F7F6F1;
+    --foreground: #171717;
+}
+
+/* Base REM configuration */
+@layer base {
+    html {
+        font-size: 16px;
+    }
+}
+
+@layer components {
+    .header-button-after {
+        @apply after:w-full after:h-0 after:top-0 after:right-0 after:bottom-0 after:left-0 after:absolute after:z-[-1] after:bg-primary-2 after:ease-out after:duration-450;
+    }
+    .header-button-hover {
+        @apply hover:after:h-full hover:after:top-[unset] hover:after:bottom-0;
+    }
+}
+@theme {
+    --font-unbounded: 'Unbounded', sans-serif;
+    --font-montserrat: 'Montserrat', sans-serif;
+
+    --text-large: 5.375rem;
+    
+    /* Light Mode Colors */
+    --color-white: #fff;
+    --color-dark-white: #fff;
+    --color-black: #000;
+    --color-light-black: #242627;
+    --color-title: #222222;
+    --color-dark-title: #222222;
+    --color-title-opc: 34, 34, 34;
+    --color-text: #4B4B52;
+    --color-text-opc: 75, 75, 82;
+
+    /* Theme Colors */
+    --color-primary-1: #ED5221;
+    --color-primary-1-opc: 237, 82, 33;
+    --color-primary-2: #222222;
+    --color-dark-primary-2: #222222;
+    --color-primary-2-opc: 34, 34, 34;
+
+    /* Borders */
+    --color-border: #eee;
+    --color-border-2: #4B4B52;
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Unbounded, Montserrat, sans-serif;
+}
+
+body.dark {
+    --color-white: #fff;
+    --color-dark-white: #0B0C0C;
+    --color-black: #000;
+    --color-black-2: #1E1F1F;
+    --color-title: #fff;
+    --color-title-opc: 255, 255, 255;
+    --color-text: #B5B5B5;
+    --color-text-opc: 255, 255, 255;
+
+    /* Theme Colors */
+    --color-primary-2: #fff;
+    --color-primary-2-opc: 255, 255, 255;
+
+    /* Borders */
+    --color-border: #5e5a5a6e;
+    --color-border-2: #B5B5B5;
+
+    background-color: #121212;
+}
+
