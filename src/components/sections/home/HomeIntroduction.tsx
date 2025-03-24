@@ -4,17 +4,16 @@ import Link from "next/link";
 import { PERSONAL_IDENTIFIABLE_INFORMATION } from "@/constants";
 import { DownloadCVButton, Paragraph, SubTitle, Title } from "@/components";
 
-
-const Introduction : React.FC = () => {
+const HomeIntroduction : React.FC = () => {
     const profile = PERSONAL_IDENTIFIABLE_INFORMATION.profile;
     
     return (
         <div>
-            <Title margin={"mb-5"}>
+            <Title margin={"mb-5 font-extrabold leading-[1.3]"}>
                 I'm { profile.fullName }
             </Title>
             <div className={"mb-8.75"}>
-                <SubTitle>
+                <SubTitle className={"font-medium leading-none"}>
                     I Am,
                     <span className={"ml-1 p-1 text-2xl text-white bg-primary-1 leading-none inline-block"}>
                         { profile.title }
@@ -38,4 +37,4 @@ const Introduction : React.FC = () => {
     );
 };
 
-export default Introduction;
+export default HomeIntroduction;

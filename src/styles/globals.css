@@ -1,7 +1,7 @@
 @import "tailwindcss";
+@import '@fortawesome/fontawesome-free/css/all.min.css';
 @plugin "./plugin/custom.ts";
 @plugin "@tailwindcss/aspect-ratio";
-
 :root {
     --background: #F7F6F1;
     --foreground: #171717;
@@ -21,13 +21,24 @@
     .header-button-hover {
         @apply hover:after:h-full hover:after:top-[unset] hover:after:bottom-0;
     }
+    .about-button-after {
+        @apply after:w-9 after:h-9 after:top-6.5 after:right-0 after:content-["\f068"]
+        after:flex-center after:text-xl after:font-semibold after:rounded-full
+        after:border after:border-r-3 after:border-b-3 after:border-solid after:border-primary-2
+        after:bg-[#F7F6F1] after:absolute hover:after:border-primary-1 hover:after:text-primary-1
+        after:duration-350 after:transition-all after:font-["Font_Awesome_5_Free"]
+        after:rotate-0;
+    }
+    .about-button-after-active {
+        @apply after:content-["\2b"] after:rotate-180;
+    }
 }
 @theme {
     --font-unbounded: 'Unbounded', sans-serif;
     --font-montserrat: 'Montserrat', sans-serif;
 
     --text-large: 5.375rem;
-    
+
     /* Light Mode Colors */
     --color-white: #fff;
     --color-dark-white: #fff;
@@ -58,8 +69,8 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: #0a0a0a;
-        --foreground: #ededed;
+        /*--background: #0a0a0a;*/
+        /*--foreground: #ededed;*/
     }
 }
 

@@ -9,7 +9,7 @@ const HomeBanner : React.FC = () => {
     return (
         <div className={"relative"}>
             <img src="/banner.png" alt="Banner" className={"max-w-full h-auto"}/>
-            <ContactButton label={"Years Experience"} numberLabel={profile.experience} position={"top-[30%] -left-1/5"}/>
+            <ContactButton label={"Years Experience"} numberLabel={profile.experienceYear} position={"top-[30%] -left-1/5"}/>
             <ContactButton label={"Completed Project"} numberLabel={profile.projectsCompleted} position={"bottom-[30%] right-0"}/>
         </div>
     );

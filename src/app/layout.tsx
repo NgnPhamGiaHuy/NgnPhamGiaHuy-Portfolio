@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Unbounded, Montserrat } from "next/font/google";
+
+import "../lib/fontawesome"
 import "../styles/globals.css";
 
 const unbounded = Unbounded({ subsets: ['latin'], variable: '--font-unbounded' });
