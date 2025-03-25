@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa6";
+import { FaCodepen, FaGithub, FaLinkedin } from "react-icons/fa6";
 
 import { PIIProps } from "@/types";
 import {SiMaterialdesignicons} from "react-icons/si";
@@ -18,6 +18,36 @@ const PERSONAL_IDENTIFIABLE_INFORMATION : PIIProps = {
         { icon: <SiMaterialdesignicons className={"w-12 h-12 text-text"} />, title: "Product Design", list: ["Lorem ipsum dolor sit amet", "Lorem ipsum dolor sit amet", "Lorem ipsum dolor sit amet"] },
         { icon: <SiMaterialdesignicons className={"w-12 h-12 text-text"} />, title: "Product Design", list: ["Lorem ipsum dolor sit amet", "Lorem ipsum dolor sit amet", "Lorem ipsum dolor sit amet"] },
         { icon: <SiMaterialdesignicons className={"w-12 h-12 text-text"} />, title: "Product Design", list: ["Lorem ipsum dolor sit amet", "Lorem ipsum dolor sit amet", "Lorem ipsum dolor sit amet"] },
+    ],
+    portfolios: [
+        {
+            title: "NFT Portfolio",
+            category: "Product Design",
+            icon: (index: number, hoveredIndex:number) => (
+                <FaCodepen
+                    className={"w-5 h-5"}
+                    style={{ color: hoveredIndex === index ? 'white' : 'var(--color-primary-1)' }}
+                />
+            ),
+        },{
+            title: "NFT Portfolio",
+            category: "Product Design",
+            icon: (index: number, hoveredIndex:number) => (
+                <FaCodepen
+                    className={"w-5 h-5"}
+                    style={{ color: hoveredIndex === index ? 'white' : 'var(--color-primary-1)' }}
+                />
+            ),
+        },{
+            title: "NFT Portfolio",
+            category: "Product Design",
+            icon: (index: number, hoveredIndex:number) => (
+                <FaCodepen
+                    className={"w-5 h-5"}
+                    style={{ color: hoveredIndex === index ? 'white' : 'var(--color-primary-1)' }}
+                />
+            ),
+        },
     ],
     experienceYear: "1+",
     projectsCompleted: 20,

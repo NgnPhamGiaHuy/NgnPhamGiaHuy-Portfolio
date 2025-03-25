@@ -9,5 +9,10 @@ export { default as AboutStatsSection } from "@/components/sections/about/AboutS
 export { default as Home } from "@/components/sections/home/Home";
 export { default as Introduction } from "@/components/sections/home/HomeIntroduction";
 
+export { default as Portfolio } from "@/components/sections/portfolio/Portfolio";
+export { default as PortfolioItem } from "@/components/sections/portfolio/PortfolioItem";
+export { default as PortfolioList } from "@/components/sections/portfolio/PortfolioList";
+export { default as PortfolioPreview } from "@/components/sections/portfolio/PortfolioPreview";
+
 export { default as Service } from "@/components/sections/service/Service";
 export { default as ServiceContent } from "@/components/sections/service/ServiceContent";
