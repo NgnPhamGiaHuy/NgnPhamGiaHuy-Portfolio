@@ -8,3 +8,6 @@ export { default as AboutStatsSection } from "@/components/sections/about/AboutS
 
 export { default as Home } from "@/components/sections/home/Home";
 export { default as Introduction } from "@/components/sections/home/HomeIntroduction";
+
+export { default as Service } from "@/components/sections/service/Service";
+export { default as ServiceContent } from "@/components/sections/service/ServiceContent";

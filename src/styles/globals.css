@@ -33,6 +33,7 @@
         @apply after:content-["\2b"] after:rotate-180;
     }
 }
+
 @theme {
     --font-unbounded: 'Unbounded', sans-serif;
     --font-montserrat: 'Montserrat', sans-serif;

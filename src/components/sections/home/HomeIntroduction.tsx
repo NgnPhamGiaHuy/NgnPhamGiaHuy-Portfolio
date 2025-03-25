@@ -5,23 +5,23 @@ import { PERSONAL_IDENTIFIABLE_INFORMATION } from "@/constants";
 import { DownloadCVButton, Paragraph, SubTitle, Title } from "@/components";
 
 const HomeIntroduction : React.FC = () => {
-    const profile = PERSONAL_IDENTIFIABLE_INFORMATION.profile;
+    const info = PERSONAL_IDENTIFIABLE_INFORMATION;
     
     return (
         <div>
-            <Title margin={"mb-5 font-extrabold leading-[1.3]"}>
-                I'm { profile.fullName }
+            <Title className={"mb-5 text-[5.375rem] font-extrabold leading-[1.3]"} size={"custom"}>
+                I'm { info.fullName }
             </Title>
             <div className={"mb-8.75"}>
                 <SubTitle className={"font-medium leading-none"}>
                     I Am,
                     <span className={"ml-1 p-1 text-2xl text-white bg-primary-1 leading-none inline-block"}>
-                        { profile.title }
+                        { info.title }
                     </span>
                 </SubTitle>
             </div>
             <Paragraph className={"mb-12"}>
-                { profile.bio }
+                { info.bio }
             </Paragraph>
             <div className={"flex items-center gap-15"}>
                 <DownloadCVButton fileName={"CV.pdf"}>

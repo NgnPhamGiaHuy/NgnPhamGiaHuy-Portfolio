@@ -4,11 +4,12 @@ import { AnimatedStatCard } from "@/components";
 import { PERSONAL_IDENTIFIABLE_INFORMATION } from "@/constants";
 
 const AboutStatsSection : React.FC = () => {
-    const profile = PERSONAL_IDENTIFIABLE_INFORMATION.profile;
+    const info = PERSONAL_IDENTIFIABLE_INFORMATION;
+    
     const cardList = [
-        { title: "Years Of Experience", targetNumber: profile.experienceYear },
-        { title: "Certificates received", targetNumber: profile.certificates.length.toString() },
-        { title: "Projects Complete", targetNumber: profile.projectsCompleted },
+        { title: "Years Of Experience", targetNumber: info.experienceYear },
+        { title: "Certificates received", targetNumber: info.certificates.length.toString() },
+        { title: "Projects Complete", targetNumber: info.projectsCompleted.toString() },
     ]
 
     return (

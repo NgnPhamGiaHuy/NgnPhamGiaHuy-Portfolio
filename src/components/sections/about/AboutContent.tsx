@@ -4,11 +4,13 @@ import { PERSONAL_IDENTIFIABLE_INFORMATION } from "@/constants";
 import { AboutCollapsibleSection, AboutIntroduction, AboutLayout, AboutSkillsSection, AboutTitle, QuarterGrid, TestimonialItem } from "@/components";
 
 const AboutContent : React.FC = () => {
-    const profile = PERSONAL_IDENTIFIABLE_INFORMATION.profile;
-    const certificates = PERSONAL_IDENTIFIABLE_INFORMATION.profile.certificates;
+    const info = PERSONAL_IDENTIFIABLE_INFORMATION;
+    
+    const certificates = info.certificates;
+    
     const collapsibleSection = [
-        { title: "Educations", list: profile.education },
-        { title: "Experiences", list: profile.experience },
+        { title: "Educations", list: info.education },
+        { title: "Experiences", list: info.experience },
     ]
     
     return (

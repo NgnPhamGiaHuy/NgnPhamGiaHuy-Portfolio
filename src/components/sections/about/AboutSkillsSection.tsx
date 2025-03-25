@@ -5,7 +5,7 @@ import { divideSkillsIntoColumns } from "@/utils";
 import { PERSONAL_IDENTIFIABLE_INFORMATION } from "@/constants";
 
 const AboutSkillsSection : React.FC = () => {
-    const skillColumns = divideSkillsIntoColumns(PERSONAL_IDENTIFIABLE_INFORMATION.profile.skills);
+    const skillColumns = divideSkillsIntoColumns(PERSONAL_IDENTIFIABLE_INFORMATION.skills);
     
     return (
         <AboutLayout title={"Professional Skill"}>

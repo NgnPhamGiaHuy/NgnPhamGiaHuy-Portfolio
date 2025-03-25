@@ -1,7 +1,16 @@
-import { Profile } from "@/types/PII/profile";
-import { SocialProfilesProps } from "@/types/PII/socialProfiles";
+import { ContactProps, ServiceProps, SkillInterface, SocialProfilesProps, TimelineEntry } from "@/types";
 
 export interface PIIProps {
-    profile: Profile;
+    fullName: string;
+    title: string;
+    bio: string;
+    contact: ContactProps;
+    services: ServiceProps[];
+    experienceYear: string;
+    projectsCompleted: number;
+    skills: SkillInterface[];
+    education: TimelineEntry[];
+    experience: TimelineEntry[];
+    certificates: TimelineEntry[];
     socialProfiles: SocialProfilesProps[];
 }

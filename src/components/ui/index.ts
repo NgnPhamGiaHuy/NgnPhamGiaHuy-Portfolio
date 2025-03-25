@@ -4,6 +4,7 @@ export { default as CollapsibleItem } from "@/components/ui/animate/CollapsibleI
 
 export { default as AboutBanner } from "@/components/ui/banner/AboutBanner";
 export { default as HomeBanner } from "@/components/ui/banner/HomeBanner";
+export { default as ServiceBanner } from "@/components/ui/banner/ServiceBanner";
 
 export { default as ContactButton } from "@/components/ui/buttons/ContactButton";
 export { default as DownloadCVButton } from "@/components/ui/buttons/DownloadCVButton";
