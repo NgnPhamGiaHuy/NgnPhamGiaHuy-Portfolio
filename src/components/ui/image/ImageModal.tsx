@@ -19,7 +19,7 @@ const ImageModal: React.FC<ImageModalProps> = ({ isOpen, onClose, url }) => {
             <Dialog as="div" className="fixed inset-0 z-10 overflow-y-auto" onClose={onClose}>
                 <div className="min-h-screen px-4 text-center">
                     <Transition.Child as={Fragment} enter="ease-out duration-300" enterFrom="opacity-0" enterTo="opacity-100" leave="ease-in duration-200" leaveFrom="opacity-100" leaveTo="opacity-0">
-                        <Dialog as="div" className="fixed inset-0 z-10 flex items-center justify-center bg-black/30" onClose={onClose} />
+                        <Dialog as="div" className="inset-0 flex-center bg-black/30 fixed z-10" onClose={onClose} />
                     </Transition.Child>
                     <span className="inline-block h-screen align-middle" aria-hidden="true">
                         &#8203;

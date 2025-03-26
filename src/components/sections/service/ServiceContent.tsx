@@ -1,6 +1,7 @@
 import React from "react";
 import { PiCheckFatFill } from "react-icons/pi";
 
+import { Heading } from "@/components";
 import { PERSONAL_IDENTIFIABLE_INFORMATION } from "@/constants";
 
 const ServiceContent : React.FC = () => {
@@ -10,16 +11,16 @@ const ServiceContent : React.FC = () => {
         <div>
             { info.services.map((item, index, arr) => (
                 <div key={index} className={`${ index === 0 ? "rounded-t-lg border-b-0" : index === arr.length - 1 ? "rounded-b-lg border-b" : "border-b-0"} grid grid-cols-[11%_32%_57%] items-center border  border-solid border-primary-2-opc group transition-all duration-350 relative z-[1] hover:bg-white`}>
-                    <div className={"h-full p-7.5 flex-center border-r border-solid border-primary-2-opc"}>
+                    <div className={"h-full p-8 flex-center border-r border-solid border-primary-2-opc"}>
                         { item.icon }
                     </div>
-                    <h3 className={"py-7.5 pl-7.5 pr-5 text-xl text-title font-medium"}>
+                    <Heading level={2} size={"custom"} fontWeight={"medium"} className={"py-8 pl-8 pr-4 text-xl"}>
                         { item.title }
-                    </h3>
-                    <div className={"max-w-130 w-full py-9 pr-11.25"}>
+                    </Heading>
+                    <div className={"max-w-130 w-full py-8 pr-12"}>
                         <ul className={"columns-2 gap-x-0"}>
-                            {item.list.map((item, index) => (
-                                <li key={index} className={"mb-6 flex items-center gap-2  text-xs text-text font-medium font-(family-name:--font-montserrat) leading-[1.2]"}>
+                            { item.list.map((item, index) => (
+                                <li key={index} className={"mb-6 flex items-center gap-2  text-xs text-text font-medium font-(family-name:--font-montserrat) leading-tight"}>
                                     <PiCheckFatFill className={"text-primary-1"}/>
                                     { item }
                                 </li>

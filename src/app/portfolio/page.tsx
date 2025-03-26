@@ -3,11 +3,11 @@
 import React from "react";
 import { usePathname } from "next/navigation";
 
-import { AppLayout, Home, Portfolio } from "@/components";
+import { AppLayout, Portfolio } from "@/components";
 
 
 const PortfolioPage : React.FC = () => {
-    const pathname = usePathname();
+    const pathname : string = usePathname();
 
     return (
         <AppLayout activeLink={pathname}>

@@ -2,28 +2,28 @@ import React from "react";
 import Link from "next/link";
 
 import { PERSONAL_IDENTIFIABLE_INFORMATION } from "@/constants";
-import { DownloadCVButton, Paragraph, SubTitle, Title } from "@/components";
+import { DownloadCVButton, Paragraph, Heading } from "@/components";
 
 const HomeIntroduction : React.FC = () => {
     const info = PERSONAL_IDENTIFIABLE_INFORMATION;
     
     return (
         <div>
-            <Title className={"mb-5 text-[5.375rem] font-extrabold leading-[1.3]"} size={"custom"}>
+            <Heading level={1} size={"custom"} className={"mb-4 text-[5.375rem] leading-snug"} >
                 I'm { info.fullName }
-            </Title>
-            <div className={"mb-8.75"}>
-                <SubTitle className={"font-medium leading-none"}>
+            </Heading>
+            <div className={"mb-8"}>
+                <Heading level={2} color={"text-text"} fontWeight={"medium"} size={"custom"} className={"text-lg leading-none"}>
                     I Am,
                     <span className={"ml-1 p-1 text-2xl text-white bg-primary-1 leading-none inline-block"}>
                         { info.title }
                     </span>
-                </SubTitle>
+                </Heading>
             </div>
-            <Paragraph className={"mb-12"}>
+            <Paragraph className={"mb-12 leading-relaxed"}>
                 { info.bio }
             </Paragraph>
-            <div className={"flex items-center gap-15"}>
+            <div className={"flex items-center gap-16"}>
                 <DownloadCVButton fileName={"CV.pdf"}>
                     Download My CV
                 </DownloadCVButton>

@@ -19,8 +19,8 @@ const AnimatedStatCard: React.FC<AnimatedStatCardProps> = ({ title, targetNumber
     const { number, suffix } = extractNumberAndSuffix(targetNumber);
     
     return (
-        <div className={"max-w-full w-47.5"}>
-            <div className={"flex flex-col-reverse items-stretch justify-center gap-2.5"}>
+        <div className={"max-w-full w-48"}>
+            <div className={"flex flex-col-reverse items-stretch justify-center gap-2"}>
                 <div className={"flex-center flex-1"}>
                     <span className={"text-lg text-text font-normal font-(family-name:--font-montserrat) leading-8"}>
                         { title }

@@ -1,0 +1,23 @@
+import React from "react";
+import { TITLE_SIZE_MAP } from "@/constants";
+import { TypographyProps } from "@/types";
+
+interface HeadingProps extends TypographyProps {
+    as?: keyof React.JSX.IntrinsicElements;
+    level?: 1 | 2 | 3 | 4 | 5 | 6;
+}
+
+const Heading: React.FC<HeadingProps> = ({ children, level = 1, size = "xl", align = "left", color = "text-title", fontWeight = "bold", className = "" }) => {
+    const customFontSize =
+        size === "custom"
+            ? `${className}`
+            : `${TITLE_SIZE_MAP[size]}`;
+
+    const baseStyle = `text-${align} font-${fontWeight} ${customFontSize} ${color} ${className}`;
+
+    const Tag = `h${level}` as keyof React.JSX.IntrinsicElements;
+
+    return <Tag className={baseStyle}>{children}</Tag>;
+};
+
+export default Heading;

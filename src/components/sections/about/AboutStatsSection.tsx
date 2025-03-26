@@ -13,8 +13,8 @@ const AboutStatsSection : React.FC = () => {
     ]
 
     return (
-        <div className={"max-w-192.5 w-full mt-10 flex flex-row grow-0 shrink basis-auto"}>
-            <div className={"w-full flex-between flex-row flex-nowrap gap-7.5"}>
+        <div className={"max-w-192 w-full mt-12 flex flex-row grow-0 shrink basis-auto"}>
+            <div className={"w-full flex-between flex-row flex-nowrap gap-8"}>
                 { cardList.map((card, index) => (
                     <AnimatedStatCard key={index} title={card.title} targetNumber={card.targetNumber} />
                 )) }

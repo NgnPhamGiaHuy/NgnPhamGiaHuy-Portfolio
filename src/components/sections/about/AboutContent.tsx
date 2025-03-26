@@ -1,7 +1,7 @@
 import React from "react";
 
 import { PERSONAL_IDENTIFIABLE_INFORMATION } from "@/constants";
-import { AboutCollapsibleSection, AboutIntroduction, AboutLayout, AboutSkillsSection, AboutTitle, QuarterGrid, TestimonialItem } from "@/components";
+import { AboutCollapsibleSection, AboutIntroduction, AboutLayout, AboutSkillsSection, Heading, QuarterGrid, TestimonialItem } from "@/components";
 
 const AboutContent : React.FC = () => {
     const info = PERSONAL_IDENTIFIABLE_INFORMATION;
@@ -11,17 +11,17 @@ const AboutContent : React.FC = () => {
     const collapsibleSection = [
         { title: "Educations", list: info.education },
         { title: "Experiences", list: info.experience },
-    ]
+    ];
     
     return (
         <div>
             <AboutIntroduction />
             <AboutSkillsSection />
             <div>
-                <div className={"h-full mt-25"}>
-                    <AboutTitle className={"font-medium leading-[1.3]"}>
+                <div className={"h-full mt-24"}>
+                    <Heading level={3} size={"md"} fontWeight={"medium"} className={"about-heading-before leading-snug inline-block relative"}>
                         Resume
-                    </AboutTitle>
+                    </Heading>
                 </div>
             </div>
             { collapsibleSection.map((section, index) => (

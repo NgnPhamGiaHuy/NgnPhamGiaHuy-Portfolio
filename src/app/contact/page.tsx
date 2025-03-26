@@ -3,16 +3,16 @@
 import React from "react";
 import { usePathname } from "next/navigation";
 
-import { About, AppLayout } from "@/components";
+import { AppLayout, Contact } from "@/components";
 
-const AboutPage : React.FC = () => {
+const ContactPage : React.FC = () => {
     const pathname : string = usePathname();
     
     return (
         <AppLayout activeLink={pathname}>
-            <About />
+            <Contact />
         </AppLayout>
     );
 };
 
-export default AboutPage;
+export default ContactPage;

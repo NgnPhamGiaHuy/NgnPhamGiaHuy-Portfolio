@@ -1,6 +1,6 @@
 import React from "react";
 
-import { AboutTitle } from "@/components";
+import { Heading } from "@/components";
 
 interface AboutLayoutProps {
     title: string;
@@ -10,11 +10,11 @@ interface AboutLayoutProps {
 const AboutLayout : React.FC<AboutLayoutProps> = ({ title, children }) => {
     return (
         <div>
-            <div className={"h-full mt-25"}>
-                <div className={"mb-15"}>
-                    <AboutTitle className={"font-medium leading-[1.3]"}>
+            <div className={"h-full mt-24"}>
+                <div className={"mb-16"}>
+                    <Heading level={3} size={"md"} fontWeight={"medium"} className={"about-heading-before leading-snug inline-block relative"}>
                         { title }
-                    </AboutTitle>
+                    </Heading>
                 </div>
                 { children }
             </div>

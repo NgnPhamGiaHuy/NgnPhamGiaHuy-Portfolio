@@ -8,10 +8,10 @@ const About : React.FC = () => {
     return (
         <div>
             <div className={"max-w-full w-full flex flex-row relative"}>
-                <div className={"max-w-full w-[40%] relative"}>
+                <div className={"max-w-full w-2/5 relative"}>
                     <AboutBanner />
                 </div>
-                <div className={"max-w-full w-[60%] h-full pt-31.25 pr-30 pb-27.5 pl-17.5 flex flex-col grow-0 shrink basis-auto relative"}>
+                <div className={"max-w-full w-3/5 h-full pt-32 pr-28 pb-28 pl-16 flex flex-col grow-0 shrink basis-auto relative"}>
                     <AboutContent />
                 </div>
             </div>

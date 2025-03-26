@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { AppLayout, Home } from "@/components";
 
 const HomePage : React.FC = () => {
-    const pathname = usePathname();
+    const pathname : string= usePathname();
 
     return (
         <AppLayout activeLink={pathname}>

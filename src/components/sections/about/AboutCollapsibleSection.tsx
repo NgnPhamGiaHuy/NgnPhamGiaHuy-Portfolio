@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 
 import { TimelineEntry } from "@/types";
-import { AboutSectionTitle, CollapsibleItem } from "@/components";
+import { AboutSectionTitle, CollapsibleItem, Heading } from "@/components";
 
 interface AboutCollapsibleSectionProps {
     title: string;
@@ -12,7 +12,7 @@ interface AboutCollapsibleSectionProps {
 
 const AboutCollapsibleSection : React.FC<AboutCollapsibleSectionProps> = ({ title, list }) => {
     const [activeIndex, setActiveIndex] = useState<number>(0);
-    
+
     return (
         <div>
             <div className={"h-full mt-16"}>
@@ -20,15 +20,15 @@ const AboutCollapsibleSection : React.FC<AboutCollapsibleSectionProps> = ({ titl
                 <div>
                     { list.map((item, index) => (
                         <CollapsibleItem key={index} title={item.title} index={index} activeIndex={activeIndex} setActiveIndex={setActiveIndex}>
-                            <div className={"mb-5 flex-between flex-wrap gap-4"}>
-                                <h3 className={"text-[20px] text-title italic font-semibold leading-[1.5]"}>
+                            <div className={"mb-4 flex-between flex-wrap gap-4"}>
+                                <Heading level={5} size={"custom"} fontWeight={"semibold"} className={"text-xl italic leading-normal"}>
                                     { item.subtitle }
-                                </h3>
+                                </Heading>
                                 <span className={"text-base text-title italic font-medium leading-none"}>
                                     { item.year.split(" - ")[0]} - &nbsp;
                                     { ["present", "now"].includes(item.year.split(" - ")[1]?.toLowerCase()) ? (
                                         <strong className={"text-primary-1 uppercase"}>
-                                            {item.year.split(" - ")[1]}
+                                            { item.year.split(" - ")[1] }
                                         </strong>
                                     ) : (
                                         item.year.split(" - ")[1]
