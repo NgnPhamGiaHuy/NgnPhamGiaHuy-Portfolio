@@ -1,5 +1,5 @@
 import ReCAPTCHA from "react-google-recaptcha";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 
 import { Button, Input } from "@/components";
 
@@ -8,16 +8,16 @@ const ContactForm: React.FC = () => {
 
     const [captchaValue, setCaptchaValue] = useState<string | null>(null);
 
-    const handleCaptchaChange = (value: string | null) => {
+    const handleCaptchaChange = useCallback((value: string | null) => {
         setCaptchaValue(value);
-    };
+    }, []);
 
-    const handleSubmit = (event: React.FormEvent) => {
+    const handleSubmit = useCallback((event: React.FormEvent) => {
         if (!captchaValue) {
             event.preventDefault();
             alert("Please complete the ReCAPTCHA before submitting.");
         }
-    };
+    }, [captchaValue]);
 
     return (
         <div>
@@ -37,10 +37,7 @@ const ContactForm: React.FC = () => {
                     </span>
                 </div>
                 <div className="mt-4 w-76 h-19.5">
-                    <ReCAPTCHA
-                        sitekey={siteKey!}
-                        onChange={handleCaptchaChange}
-                    />
+                    <ReCAPTCHA sitekey={siteKey!} onChange={handleCaptchaChange}/>
                 </div>
                 <div className={"mt-8"}>
                     <Button color={"secondary"} size={"md"} disabled={!captchaValue}>

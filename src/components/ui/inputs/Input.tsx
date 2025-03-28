@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import React from "react";
 
 interface InputProps {
@@ -10,11 +11,11 @@ interface InputProps {
     width?: "full" | "half";
 }
 
-const Input: React.FC<InputProps> = ({ id, label, type = "text", isFilled = false, placeholder = "", isTextarea = false, width = "full" }) => {
+const Input: React.FC<InputProps> = React.memo(({ id, label, type = "text", isFilled = false, placeholder = "", isTextarea = false, width = "full" }) => {
     const widthClass = width === "full" ? "w-full" : "w-1/2";
 
     return (
-        <div className={`${widthClass} mt-12 px-3 flex-none-auto`}>
+        <div className={clsx(widthClass, "mt-12 px-3 flex-none-auto")}>
             <label htmlFor={id} className={"mb-5 text-sm text-title font-semibold font-(family-name:--font-montserrat) leading-none inline-block"}>
                 { label }*
             </label>
@@ -32,6 +33,6 @@ const Input: React.FC<InputProps> = ({ id, label, type = "text", isFilled = fals
             </span>
         </div>
     );
-};
+});
 
 export default Input;

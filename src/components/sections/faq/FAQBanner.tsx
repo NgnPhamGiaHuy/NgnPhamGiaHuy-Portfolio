@@ -3,7 +3,7 @@ import { FcServices } from "react-icons/fc";
 
 import { Banner, Button, Heading, Paragraph, SectionTitle } from "@/components";
 
-const FaqBanner : React.FC = React.memo(() => {
+const FaqBanner: React.FC = () => {
     return (
         <Banner padding={"px-20 pt-16 pb-56"} align={"start"} justify={"between"}>
             <div>
@@ -20,6 +20,6 @@ const FaqBanner : React.FC = React.memo(() => {
             </div>
         </Banner>
     );
-});
+};
 
 export default FaqBanner;

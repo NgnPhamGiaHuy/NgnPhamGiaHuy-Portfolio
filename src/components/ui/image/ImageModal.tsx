@@ -10,7 +10,7 @@ interface ImageModalProps {
     onClose: () => void;
 }
 
-const ImageModal: React.FC<ImageModalProps> = ({ isOpen, onClose, url }) => {
+const ImageModal: React.FC<ImageModalProps> = React.memo(({ isOpen, onClose, url }) => {
     const modalRef = useRef<HTMLDivElement>(null);
     useClickOutside(modalRef, isOpen, onClose);
 
@@ -34,6 +34,6 @@ const ImageModal: React.FC<ImageModalProps> = ({ isOpen, onClose, url }) => {
             </Dialog>
         </Transition>
     );
-};
+});
 
 export default ImageModal;

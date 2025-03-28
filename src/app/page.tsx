@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 import { AppLayout, Home } from "@/components";
 
-const HomePage : React.FC = React.memo(() => {
+const HomePage : React.FC = () => {
     const pathname : string= usePathname();
 
     return (
@@ -13,6 +13,6 @@ const HomePage : React.FC = React.memo(() => {
             <Home />
         </AppLayout>
     );
-});
+};
 
 export default HomePage;

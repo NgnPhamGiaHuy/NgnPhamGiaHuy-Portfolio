@@ -8,7 +8,7 @@ import React from "react";
  * @property {React.ReactNode} icon - The icon component representing the social media platform
  */
 export interface SocialProfilesProps {
-  title: string;
-  url: string;
-  icon: React.ReactNode;
+    title: string;
+    url: string;
+    icon: React.ReactNode;
 }

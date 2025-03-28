@@ -6,10 +6,9 @@ import { motion } from "framer-motion";
 interface CollapsibleItemProps {
     index: number;
     activeIndex: number | null;
-    children: React.ReactNode;
 }
 
-const CollapsibleItem = React.memo<CollapsibleItemProps>(({ index, activeIndex, children }) => {
+const CollapsibleItem : React.FC<React.PropsWithChildren<CollapsibleItemProps>> = React.memo(({ index, activeIndex, children }) => {
     return (
         <div className={"border-none bg-transparent overflow-hidden"}>
             { React.Children.toArray(children)[0] }

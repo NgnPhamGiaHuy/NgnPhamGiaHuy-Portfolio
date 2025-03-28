@@ -3,7 +3,7 @@ import React from "react";
 import { ContactButton } from "@/components";
 import { PERSONAL_IDENTIFIABLE_INFORMATION } from "@/constants";
 
-const HomeBanner : React.FC = React.memo(() => {
+const HomeBanner: React.FC = () => {
     const info = PERSONAL_IDENTIFIABLE_INFORMATION;
 
     return (
@@ -21,6 +21,6 @@ const HomeBanner : React.FC = React.memo(() => {
             />
         </div>
     );
-});
+};
 
 export default HomeBanner;

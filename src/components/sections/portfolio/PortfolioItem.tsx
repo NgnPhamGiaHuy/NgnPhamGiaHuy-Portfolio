@@ -11,7 +11,7 @@ interface PortfolioItemProps {
     setHoveredIndex: (index: number) => void;
 }
 
-const PortfolioItem: React.FC<PortfolioItemProps> = ({ item, index, hoveredIndex, setHoveredIndex }) => {
+const PortfolioItem: React.FC<PortfolioItemProps> = React.memo(({ item, index, hoveredIndex, setHoveredIndex }) => {
     return (
         <motion.li
             key={index}
@@ -74,6 +74,6 @@ const PortfolioItem: React.FC<PortfolioItemProps> = ({ item, index, hoveredIndex
             </motion.h2>
         </motion.li>
     );
-};
+});
 
 export default PortfolioItem;

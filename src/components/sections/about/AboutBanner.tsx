@@ -4,9 +4,9 @@ import React, { useMemo } from "react";
 import { Banner, Heading } from "@/components";
 import { PERSONAL_IDENTIFIABLE_INFORMATION } from "@/constants";
 
-const AboutBanner : React.FC = React.memo(() => {
+const AboutBanner: React.FC = () => {
     const info = PERSONAL_IDENTIFIABLE_INFORMATION;
-    
+
     const socialProfiles = useMemo(() =>
         info.socialProfiles.map((item, index) => (
             <li key={index} className={"px-4 border-l border-solid border-[rgba(110,110,110,0.2)]"}>
@@ -37,6 +37,6 @@ const AboutBanner : React.FC = React.memo(() => {
             </div>
         </Banner>
     );
-});
+};
 
 export default AboutBanner;

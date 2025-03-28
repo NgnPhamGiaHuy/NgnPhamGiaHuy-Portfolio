@@ -14,7 +14,7 @@ interface ContactButtonProps {
     numberLabel: string;
 }
 
-const ContactButton : React.FC<ContactButtonProps> = ({ label, position, numberLabel }) => {
+const ContactButton : React.FC<ContactButtonProps> = React.memo(({ label, position, numberLabel }) => {
     const buttonVariants = {
         initial: { backgroundColor: "#F7F6F1" },
         hover: { backgroundColor: "var(--color-primary-1)" }
@@ -65,6 +65,6 @@ const ContactButton : React.FC<ContactButtonProps> = ({ label, position, numberL
             </motion.div>
         </Link>
     );
-};
+});
 
 export default ContactButton;

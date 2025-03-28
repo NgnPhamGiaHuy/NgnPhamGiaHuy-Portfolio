@@ -11,7 +11,7 @@ interface PortfolioListProps {
     setHoveredIndex:  React.Dispatch<React.SetStateAction<number>>,
 }
 
-const PortfolioList: React.FC<PortfolioListProps> = ({ info, hoveredIndex, setHoveredIndex }) => {
+const PortfolioList: React.FC<PortfolioListProps> = React.memo(({ info, hoveredIndex, setHoveredIndex }) => {
     return (
         <ul style={{ scrollbarWidth: "none" }} className={"h-[95vh] pb-12 overflow-y-scroll"}>
             { info.portfolios.map((item, index) => (
@@ -19,6 +19,6 @@ const PortfolioList: React.FC<PortfolioListProps> = ({ info, hoveredIndex, setHo
             )) }
         </ul>
     );
-};
+});
 
 export default PortfolioList;

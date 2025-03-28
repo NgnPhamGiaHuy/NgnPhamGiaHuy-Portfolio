@@ -4,7 +4,7 @@ import { AboutLayout, SkillColumn } from "@/components";
 import { divideSkillsIntoColumns } from "@/utils";
 import { PERSONAL_IDENTIFIABLE_INFORMATION } from "@/constants";
 
-const AboutSkillsSection : React.FC = React.memo(() => {
+const AboutSkillsSection: React.FC = () => {
     const skillColumns = useMemo(
         () => divideSkillsIntoColumns(PERSONAL_IDENTIFIABLE_INFORMATION.skills),
         [PERSONAL_IDENTIFIABLE_INFORMATION.skills]
@@ -21,6 +21,6 @@ const AboutSkillsSection : React.FC = React.memo(() => {
             </div>
         </AboutLayout>
     );
-});
+};
 
 export default AboutSkillsSection;

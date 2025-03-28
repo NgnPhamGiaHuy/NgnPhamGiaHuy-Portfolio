@@ -8,7 +8,7 @@ interface AnimatedCounterProps {
     duration?: number;
 }
 
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({ targetNumber, duration = 1.5 }) => {
+const AnimatedCounter: React.FC<AnimatedCounterProps> = React.memo(({ targetNumber, duration = 1.5 }) => {
     const [displayNumber, setDisplayNumber] = useState(0);
 
     useEffect(() => {
@@ -28,6 +28,6 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({ targetNumber, duratio
             { displayNumber }
         </motion.div>
     );
-};
+});
 
 export default AnimatedCounter;

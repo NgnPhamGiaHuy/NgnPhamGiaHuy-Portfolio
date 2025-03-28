@@ -4,7 +4,7 @@ import React from "react";
 
 import { HomeBanner, HomeIntroduction } from "@/components";
 
-const Home : React.FC = React.memo(() => {
+const Home: React.FC = () => {
     return (
         <div className={"h-full"}>
             <div className={"pr-40 pl-36 py-28"}>
@@ -21,6 +21,6 @@ const Home : React.FC = React.memo(() => {
             </div>
         </div>
     );
-});
+};
 
 export default Home;

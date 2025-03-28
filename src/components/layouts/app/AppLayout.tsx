@@ -8,13 +8,13 @@ interface AppLayoutProps {
     activeLink: string;
 }
 
-const AppLayout : React.FC<React.PropsWithChildren<AppLayoutProps>> = React.memo(({ children, activeLink }) => {
+const AppLayout: React.FC<React.PropsWithChildren<AppLayoutProps>> = ({ children, activeLink }) => {
     return (
         <>
-            <Header activeLink={activeLink}/>
-            <Main>{ children }</Main>
+            <Header activeLink={activeLink} />
+            <Main>{children}</Main>
         </>
     );
-});
+};
 
 export default AppLayout;

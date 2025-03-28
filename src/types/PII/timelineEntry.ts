@@ -8,9 +8,9 @@
  * @property {string} description - Detailed description of the timeline entry
  */
 export interface TimelineEntry {
-  url?: string;
-  year: string;
-  title: string;
-  subtitle: string;
-  description: string;
+    url?: string;
+    year: string;
+    title: string;
+    subtitle: string;
+    description: string;
 }

@@ -12,7 +12,7 @@ interface LinkButtonProps extends Omit<TypographyProps, "color"> {
     color?: ButtonColor;
 }
 
-const DownloadCVButton: React.FC<LinkButtonProps> = ({ fileName, color = "primary", size = "md", className = "", children }) => {
+const DownloadCVButton: React.FC<LinkButtonProps> = React.memo(({ fileName, color = "primary", size = "md", className = "", children }) => {
     const handleClick = useCallback(() => handleDownloadCV({ fileName }), [fileName]);
 
     return (
@@ -20,6 +20,6 @@ const DownloadCVButton: React.FC<LinkButtonProps> = ({ fileName, color = "primar
             { children }
         </Button>
     );
-};
+});
 
 export default DownloadCVButton;

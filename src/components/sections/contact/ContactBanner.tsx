@@ -14,7 +14,7 @@ interface ContactItemProps {
     href: string;
 }
 
-const ContactBanner: React.FC = React.memo(() => {
+const ContactBanner: React.FC = () => {
     const contactInfo = PERSONAL_IDENTIFIABLE_INFORMATION.contact;
 
     const contacts: ContactItemProps[] = useMemo(() => [
@@ -62,6 +62,6 @@ const ContactBanner: React.FC = React.memo(() => {
             </div>
         </Banner>
     );
-});
+};
 
 export default ContactBanner;

@@ -6,7 +6,7 @@ interface AboutLayoutProps {
     title: string;
 }
 
-const AboutLayout : React.FC<React.PropsWithChildren<AboutLayoutProps>> = React.memo(({ title, children }) => {
+const AboutLayout: React.FC<React.PropsWithChildren<AboutLayoutProps>> = ({ title, children }) => {
     return (
         <div>
             <div className={"h-full mt-24"}>
@@ -19,6 +19,6 @@ const AboutLayout : React.FC<React.PropsWithChildren<AboutLayoutProps>> = React.
             </div>
         </div>
     );
-});
+};
 
 export default AboutLayout;

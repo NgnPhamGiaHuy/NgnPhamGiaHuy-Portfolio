@@ -15,7 +15,7 @@ const extractNumberAndSuffix = (input: string): { number: number; suffix: string
     return { number, suffix };
 };
 
-const AnimatedStatCard: React.FC<AnimatedStatCardProps> = ({ title, targetNumber }) => {
+const AnimatedStatCard: React.FC<AnimatedStatCardProps> = React.memo(({ title, targetNumber }) => {
     const { number, suffix } = extractNumberAndSuffix(targetNumber);
     
     return (
@@ -39,6 +39,6 @@ const AnimatedStatCard: React.FC<AnimatedStatCardProps> = ({ title, targetNumber
             </div>
         </div>
     );
-};
+});
 
 export default AnimatedStatCard;

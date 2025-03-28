@@ -7,7 +7,7 @@ interface QuarterGridProps {
     list: TimelineEntry[];
 }
 
-const QuarterGrid : React.FC<QuarterGridProps> = ({ list }) => {
+const QuarterGrid: React.FC<QuarterGridProps> = React.memo(({ list }) => {
     return (
         <div>
             <div className={"flex flex-wrap justify-start"}>
@@ -17,6 +17,6 @@ const QuarterGrid : React.FC<QuarterGridProps> = ({ list }) => {
             </div>
         </div>
     );
-};
+});
 
 export default QuarterGrid;

@@ -2,7 +2,7 @@ import React from "react";
 
 import { ContactBanner, ContactContent } from "@/components";
 
-const Contact = React.memo(() => {
+const Contact: React.FC = () => {
     return (
         <div>
             <div className={"max-w-full w-full flex flex-row relative"}>
@@ -15,6 +15,6 @@ const Contact = React.memo(() => {
             </div>
         </div>
     );
-});
+};
 
 export default Contact;

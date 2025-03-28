@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { PortfolioList, PortfolioPreview } from "@/components";
 import { PERSONAL_IDENTIFIABLE_INFORMATION } from "@/constants";
 
-const Portfolio : React.FC = () => {
+const Portfolio: React.FC = () => {
     const [hoveredIndex, setHoveredIndex] = useState<number>(0);
 
     const info = PERSONAL_IDENTIFIABLE_INFORMATION;

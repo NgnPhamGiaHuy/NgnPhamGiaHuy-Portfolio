@@ -4,7 +4,7 @@ import { PiCheckFatFill } from "react-icons/pi";
 import { Heading } from "@/components";
 import { PERSONAL_IDENTIFIABLE_INFORMATION } from "@/constants";
 
-const ServiceContent : React.FC = () => {
+const ServiceContent: React.FC = () => {
     const info = PERSONAL_IDENTIFIABLE_INFORMATION;
     
     return (

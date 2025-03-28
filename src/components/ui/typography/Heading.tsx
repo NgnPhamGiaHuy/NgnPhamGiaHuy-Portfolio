@@ -9,7 +9,7 @@ interface HeadingProps extends TypographyProps {
     level?: 1 | 2 | 3 | 4 | 5 | 6;
 }
 
-const Heading: React.FC<HeadingProps> = ({ children, level = 1, size = "xl", align = "left", color = "text-title", fontWeight = "bold", className = "", }) => {
+const Heading: React.FC<HeadingProps> = React.memo(({ children, level = 1, size = "xl", align = "left", color = "text-title", fontWeight = "bold", className = "", }) => {
     const Tag = (`h${level}` as keyof React.JSX.IntrinsicElements) || "h1";
 
     return (
@@ -17,6 +17,6 @@ const Heading: React.FC<HeadingProps> = ({ children, level = 1, size = "xl", ali
             { children }
         </Tag>
     );
-};
+});
 
 export default Heading;

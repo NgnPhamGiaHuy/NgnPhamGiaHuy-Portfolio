@@ -4,7 +4,7 @@ import React from "react";
 
 import { AboutBanner, AboutContent } from "@/components";
 
-const About : React.FC = React.memo(() => {
+const About: React.FC = () => {
     return (
         <div>
             <div className={"max-w-full w-full flex flex-row relative"}>
@@ -17,6 +17,6 @@ const About : React.FC = React.memo(() => {
             </div>
         </div>
     );
-});
+};
 
 export default About;

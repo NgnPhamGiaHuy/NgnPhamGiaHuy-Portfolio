@@ -2,7 +2,7 @@ import React from "react";
 
 import { ServiceBanner, ServiceContent } from "@/components";
 
-const Service : React.FC = () => {
+const Service: React.FC = () => {
     return (
         <div>
             <div className={"max-w-full w-full flex flex-row relative"}>

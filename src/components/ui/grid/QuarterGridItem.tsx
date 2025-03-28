@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -11,11 +11,11 @@ interface QuarterGridItemProps {
     showImage?: boolean;
 }
 
-const QuarterGridItem: React.FC<QuarterGridItemProps> = ({ url, showImage = false }) => {
+const QuarterGridItem: React.FC<QuarterGridItemProps> = React.memo(({ url, showImage = false }) => {
     const [isModalOpen, setModalOpen] = useState(false);
 
-    const openModal = () => setModalOpen(true);
-    const closeModal = () => setModalOpen(false);
+    const openModal = useCallback(() => setModalOpen(true), []);
+    const closeModal = useCallback(() => setModalOpen(false), []);
 
     return (
         <div className={"w-1/4 flex-none-auto"}>
@@ -35,6 +35,6 @@ const QuarterGridItem: React.FC<QuarterGridItemProps> = ({ url, showImage = fals
             ) }
         </div>
     );
-};
+});
 
 export default QuarterGridItem;

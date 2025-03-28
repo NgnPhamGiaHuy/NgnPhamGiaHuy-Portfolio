@@ -3,7 +3,7 @@ import { FcServices } from "react-icons/fc";
 
 import { Banner, Paragraph, Heading, SectionTitle, Button } from "@/components";
 
-const ServiceBanner : React.FC = () => {
+const ServiceBanner: React.FC = () => {
     return (
         <Banner padding={"px-20 pt-16 pb-56"} align={"start"} justify={"between"}>
             <div>

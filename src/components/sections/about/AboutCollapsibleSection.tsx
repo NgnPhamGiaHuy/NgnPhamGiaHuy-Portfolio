@@ -11,7 +11,7 @@ interface AboutCollapsibleSectionProps {
     list: TimelineEntry[];
 }
 
-const AboutCollapsibleSection : React.FC<AboutCollapsibleSectionProps> = React.memo(({ title, list }) => {
+const AboutCollapsibleSection: React.FC<AboutCollapsibleSectionProps> = ({ title, list }) => {
     const [activeIndex, setActiveIndex] = useState<number>(0);
 
     const handleClick = useCallback((index: number) => {
@@ -26,7 +26,7 @@ const AboutCollapsibleSection : React.FC<AboutCollapsibleSectionProps> = React.m
                     { list.map((item, index) => (
                         <CollapsibleItem key={index} index={index} activeIndex={activeIndex}>
                             <Heading level={4} size={"custom"} className={"text-lg uppercase break-words leading-snug"}>
-                                <button onClick={() => handleClick(list.indexOf(item))} className={clsx({"about-button-after-active" : activeIndex === list.indexOf(item)}, "about-button after:top-6.5 after:right-0 about-button-after")}>
+                                <button onClick={() => handleClick(index)} className={clsx({"about-button-after-active" : activeIndex === index}, "about-button after:top-6.5 after:right-0 about-button-after")}>
                                     { item.title }
                                 </button>
                             </Heading>
@@ -52,6 +52,6 @@ const AboutCollapsibleSection : React.FC<AboutCollapsibleSectionProps> = React.m
             </div>
         </div>
     );
-});
+};
 
 export default AboutCollapsibleSection;

@@ -4,11 +4,11 @@ import Link from "next/link";
 import { PERSONAL_IDENTIFIABLE_INFORMATION } from "@/constants";
 import { DownloadCVButton, Paragraph, Heading } from "@/components";
 
-const HomeIntroduction : React.FC = React.memo(() => {
+const HomeIntroduction: React.FC = () => {
     const { fullName, title, bio } = PERSONAL_IDENTIFIABLE_INFORMATION;
-    
+
     return (
-        <div>   
+        <div>
             <Heading level={1} size={"custom"} className={"mb-4 text-[5.375rem] leading-snug"} >
                 I'm { fullName }
             </Heading>
@@ -31,8 +31,8 @@ const HomeIntroduction : React.FC = React.memo(() => {
                     About More
                 </Link>
             </div>
-        </div>  
+        </div>
     );
-});
+};
 
 export default HomeIntroduction;
