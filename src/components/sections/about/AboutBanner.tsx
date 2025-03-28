@@ -1,14 +1,23 @@
-import React from "react";
 import Link from "next/link";
+import React, { useMemo } from "react";
 
 import { Banner, Heading } from "@/components";
 import { PERSONAL_IDENTIFIABLE_INFORMATION } from "@/constants";
 
-const AboutBanner : React.FC = () => {
+const AboutBanner : React.FC = React.memo(() => {
     const info = PERSONAL_IDENTIFIABLE_INFORMATION;
     
-    const socialProfiles = info.socialProfiles;
-    
+    const socialProfiles = useMemo(() =>
+        info.socialProfiles.map((item, index) => (
+            <li key={index} className={"px-4 border-l border-solid border-[rgba(110,110,110,0.2)]"}>
+                <Link href={item.url}>
+                    <span className={"text-text leading-none duration-500 transition-all hover:text-primary-1"}>
+                        { item.icon }
+                    </span>
+                </Link>
+            </li>
+        )), [info]);
+
     return (
         <Banner padding={"px-8 py-16"}>
             <div className={"w-100 h-100 mx-auto mb-5 rounded-full"}>
@@ -24,20 +33,10 @@ const AboutBanner : React.FC = () => {
                         { info.title }
                     </span>
                 </Heading>
-                <ul className={"mt-20 flex-center"}>
-                    { socialProfiles.map((item, index) => (
-                        <li key={index} className={"px-4 border-l border-solid border-[rgba(110,110,110,0.2)]"}>
-                            <Link href={item.url}>
-                                <span className={"text-text leading-none duration-500 transition-all hover:text-primary-1"}>
-                                    { item.icon }
-                                </span>
-                            </Link>
-                        </li>
-                    )) }
-                </ul>
+                <ul className={"mt-20 flex-center"}>{socialProfiles}</ul>
             </div>
         </Banner>
     );
-};
+});
 
 export default AboutBanner;

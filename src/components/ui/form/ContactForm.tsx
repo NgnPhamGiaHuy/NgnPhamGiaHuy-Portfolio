@@ -1,5 +1,5 @@
 import ReCAPTCHA from "react-google-recaptcha";
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 import { Button, Input } from "@/components";
 
@@ -36,7 +36,7 @@ const ContactForm: React.FC = () => {
                         </label>
                     </span>
                 </div>
-                <div className="mt-4">
+                <div className="mt-4 w-76 h-19.5">
                     <ReCAPTCHA
                         sitekey={siteKey!}
                         onChange={handleCaptchaChange}

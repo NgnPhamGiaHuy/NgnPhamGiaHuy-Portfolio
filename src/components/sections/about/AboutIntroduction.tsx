@@ -4,7 +4,7 @@ import React from "react";
 
 import { AboutStatsSection, Heading, Paragraph } from "@/components";
 
-const AboutIntroduction : React.FC = () => {
+const AboutIntroduction : React.FC = React.memo(() => {
     return (
         <div>
             <Heading level={3} size={"md"} fontWeight={"medium"} className={"about-heading-before leading-snug inline-block relative"}>
@@ -16,6 +16,6 @@ const AboutIntroduction : React.FC = () => {
             <AboutStatsSection />
         </div>
     );
-};
+});
 
 export default AboutIntroduction;

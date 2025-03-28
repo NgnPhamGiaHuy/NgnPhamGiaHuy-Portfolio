@@ -16,6 +16,9 @@ export { default as ImageModal } from "@/components/ui/image/ImageModal";
 
 export { default as Input } from "@/components/ui/inputs/Input";
 
+export { default as SkillColumn } from "@/components/ui/skill/SkillColumn";
+export { default as SkillItem } from "@/components/ui/skill/SkillItem";
+
 export { default as TestimonialItem } from "@/components/ui/testimonial/TestimonialItem";
 
 export { default as Heading } from "@/components/ui/typography/Heading";

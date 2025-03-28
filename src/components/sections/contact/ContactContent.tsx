@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 import { ContactForm, Heading } from "@/components";
 
-const ContactContent : React.FC = () => {
+const ContactContent : React.FC = React.memo(() => {
     return (
         <>
             <div className={"mt-8"}>
@@ -13,6 +13,6 @@ const ContactContent : React.FC = () => {
             <ContactForm/>
         </>
     );
-};
+});
 
 export default ContactContent;

@@ -24,8 +24,11 @@
     .about-heading-before {
         @apply before:w-4/5 before:h-[2px] before:left-0 before:bottom-[2px] before:bg-primary-2 before:absolute;
     }
+    .about-button {
+        @apply w-full pb-4 text-title text-left font-medium font-(family-name:--font-unbounded) uppercase border-b-2 border-solid border-primary-2 leading-normal relative cursor-pointer;
+    }
     .about-button-after {
-        @apply after:w-9 after:h-9 after:top-6.5 after:right-0 after:content-["\f068"]
+        @apply after:w-9 after:h-9 after:content-["\f068"]
         after:flex-center after:text-xl after:font-semibold after:rounded-full
         after:border after:border-r-3 after:border-b-3 after:border-solid after:border-primary-2
         after:bg-[#F7F6F1] after:absolute hover:after:border-primary-1 hover:after:text-primary-1

@@ -1,13 +1,13 @@
 import { HeaderNavProps } from "@/types";
 
-const HeaderNav : HeaderNavProps[] = [
+const HEADER_NAV : HeaderNavProps[] = [
     { link: "/", title: "Home" },
     { link: "/about", title: "About" },
     { link: "/services", title: "Services" },
     { link: "/portfolio", title: "Portfolio" },
-    { link: "/pricing", title: "Pricing" },
     { link: "/contact", title: "Contact" },
+    { link: "/faq", title: "FAQ" },
     { link: "/others", title: "Others" },
 ]
 
-export default HeaderNav;
+export default HEADER_NAV;

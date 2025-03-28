@@ -1,22 +1,22 @@
+import clsx from "clsx";
 import React from "react";
 
 interface BannerProps {
-    children: React.ReactNode;
     padding?: string;
     align?: "start" | "center" | "end";
     justify?: "start" | "center" | "between" | "end";
 }
 
-const Banner : React.FC<BannerProps> = ({ children, padding, align = "center", justify = "start" }) => {
+const Banner: React.FC<React.PropsWithChildren<BannerProps>> = React.memo(({ children, padding, align = "center", justify = "start" }) => {
     return (
-        <div className={"h-full"}>
-            <div className={"top-0 sticky"}>
-                <div className={`h-screen ${padding} top-0 flex flex-col items-${align} justify-${justify} bg-[#FBDACF] sticky`}>
+        <div className="h-full">
+            <div className="sticky top-0">
+                <div className={clsx("h-screen", padding, `items-${align}`, `justify-${justify}`, "flex flex-col bg-[#FBDACF]")}>
                     { children }
                 </div>
             </div>
         </div>
     );
-};
+});
 
 export default Banner;

@@ -3,16 +3,16 @@
 import React from "react";
 import { usePathname } from "next/navigation";
 
-import { About, AppLayout } from "@/components";
+import { AppLayout, FAQ } from "@/components";
 
-const AboutPage : React.FC = React.memo(() => {
+const FAQPage : React.FC= () => {
     const pathname : string = usePathname();
     
     return (
         <AppLayout activeLink={pathname}>
-            <About />
+            <FAQ />
         </AppLayout>
     );
-});
+};
 
-export default AboutPage;
+export default FAQPage;

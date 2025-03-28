@@ -1,4 +1,5 @@
 export * from "@/types/PII/pii";
+export * from "@/types/PII/faqs";
 export * from "@/types/PII/contact";
 export * from "@/types/PII/skill";
 export * from "@/types/PII/service";

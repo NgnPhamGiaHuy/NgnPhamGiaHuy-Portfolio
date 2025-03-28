@@ -1,5 +1,5 @@
-import React from 'react';
 import Link from "next/link";
+import React, { useMemo } from "react";
 import { FiMail, FiPhoneCall } from "react-icons/fi";
 import { MdConnectWithoutContact, MdLocationOn } from "react-icons/md";
 
@@ -14,43 +14,45 @@ interface ContactItemProps {
     href: string;
 }
 
-const contacts : ContactItemProps[] = [
-    { icon: <FiMail className="w-5 h-5" />, title: "To Know More", label: "Email", value: PERSONAL_IDENTIFIABLE_INFORMATION.contact.email, href: `mailto:${PERSONAL_IDENTIFIABLE_INFORMATION.contact.email}` },
-    { icon: <FiPhoneCall className="w-5 h-5" />, title: "Update Info", label: "Phone", value: PERSONAL_IDENTIFIABLE_INFORMATION.contact.phone, href: `tel:${PERSONAL_IDENTIFIABLE_INFORMATION.contact.phone}` },
-    { icon: <MdLocationOn className="w-5 h-5" />, title: "Local Coordinator", label: "Location", value: PERSONAL_IDENTIFIABLE_INFORMATION.contact.location, href: "#" },
-];
+const ContactBanner: React.FC = React.memo(() => {
+    const contactInfo = PERSONAL_IDENTIFIABLE_INFORMATION.contact;
 
-const ContactBanner : React.FC = () => {
+    const contacts: ContactItemProps[] = useMemo(() => [
+        { icon: <FiMail className={"w-5 h-5"} />, title: "To Know More", label: "Email", value: contactInfo.email, href: `mailto:${contactInfo.email}` },
+        { icon: <FiPhoneCall className={"w-5 h-5"} />, title: "Update Info", label: "Phone", value: contactInfo.phone, href: `tel:${contactInfo.phone}` },
+        { icon: <MdLocationOn className={"w-5 h-5"} />, title: "Local Coordinator", label: "Location", value: contactInfo.location, href: "#" },
+    ], [contactInfo]);
+
     return (
         <Banner padding={"px-20 py-12"}>
             <div className={"mt-12 w-full"}>
-                <SectionTitle text={"Talk About Ideas"} icon={<MdConnectWithoutContact className={"w-6 h-6"} />}/>
+                <SectionTitle text={"Talk About Ideas"} icon={<MdConnectWithoutContact className={"w-6 h-6"} />} />
                 <Heading level={1} size={"custom"} fontWeight={"semibold"} className={"text-5xl mb-8 leading-tight"}>
                     Contact Me
                 </Heading>
                 <Paragraph>
-                    UI/UX services encompass a range of offerings aimed at enhancing user experiences and interfaces across digital products. Here are some key services typically provided by UI/UX designers
+                    UI/UX services encompass a range of offerings aimed at enhancing user experiences and interfaces across digital products. Here are some key services typically provided by UI/UX designers.
                 </Paragraph>
             </div>
             <div className={"pt-24 w-full"}>
                 <ul>
-                    { contacts.map((item, index) => (
-                        <li key={index} className={"mb-6 pb-6 relative before:w-50 before:h-[1px] before:bottom-0 before:left-0 before:absolute before:bg-primary-2/20"}>
+                    { contacts.map((item) => (
+                        <li key={item.label} className={"mb-6 pb-6 relative before:w-50 before:h-[1px] before:bottom-0 before:left-0 before:absolute before:bg-primary-2/20"}>
                             <Heading level={2} size={"custom"} fontWeight={"normal"} className={"mb-6 text-xs leading-tight"}>
-                                { item.title }
+                                {item.title}
                             </Heading>
                             <div className={"flex flex-row items-center gap-4"}>
                                 <div className={"max-w-10 w-10 max-h-10 h-10 flex-center text-title border border-solid border-primary-2 bg-[#FBDACF] rounded-full relative before:w-10 before:h-10 before:-bottom-1 before:-right-1 before:rounded-full before:bg-primary-2/30 before:z-[-1] before:absolute"}>
-                                    { item.icon }
+                                    {item.icon}
                                 </div>
                                 <div>
                                     <span className={"mb-1 text-xs text-title font-medium font-(family-name:--font-montserrat) leading-none block"}>
-                                        { item.label }
+                                        {item.label}
                                     </span>
-                                    <Link href={item.href}>
-                                        <span className={"text-sm text-text font-normal cursor-pointer leading-normal transition-all duration-300 hover:text-primary-1"}>
-                                            { item.value }
-                                        </span>
+                                    <Link href={item.href} legacyBehavior>
+                                        <a className={"text-sm text-text font-normal cursor-pointer leading-normal transition-all duration-300 hover:text-primary-1"}>
+                                            {item.value}
+                                        </a>
                                     </Link>
                                 </div>
                             </div>
@@ -60,6 +62,6 @@ const ContactBanner : React.FC = () => {
             </div>
         </Banner>
     );
-};
+});
 
 export default ContactBanner;

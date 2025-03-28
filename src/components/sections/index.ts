@@ -11,6 +11,10 @@ export { default as Contact } from "@/components/sections/contact/Contact";
 export { default as ContactBanner } from "@/components/sections/contact/ContactBanner";
 export { default as ContactContent } from "@/components/sections/contact/ContactContent";
 
+export { default as FAQ } from "@/components/sections/faq/FAQ";
+export { default as FAQBanner } from "@/components/sections/faq/FAQBanner";
+export { default as FAQContent } from "@/components/sections/faq/FAQContent";
+
 export { default as Home } from "@/components/sections/home/Home";
 export { default as HomeBanner } from "@/components/sections/home/HomeBanner";
 export { default as HomeIntroduction } from "@/components/sections/home/HomeIntroduction";

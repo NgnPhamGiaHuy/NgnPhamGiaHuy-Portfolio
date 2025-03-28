@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 import { AppLayout, Contact } from "@/components";
 
-const ContactPage : React.FC = () => {
+const ContactPage : React.FC = React.memo(() => {
     const pathname : string = usePathname();
     
     return (
@@ -13,6 +13,6 @@ const ContactPage : React.FC = () => {
             <Contact />
         </AppLayout>
     );
-};
+});
 
 export default ContactPage;

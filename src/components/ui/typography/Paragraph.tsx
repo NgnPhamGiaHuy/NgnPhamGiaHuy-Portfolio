@@ -1,18 +1,12 @@
+import clsx from "clsx";
 import React from "react";
 
 import { TypographyProps } from "@/types";
 import { PARAGRAPH_SIZE_MAP } from "@/constants";
 
 const Paragraph: React.FC<TypographyProps> = ({ children, size = "md", color = "text-text", align = "justify", fontWeight = "normal", className = "" }) => {
-    const customFontSize =
-        size === "custom"
-            ? `${className}`
-            : `${PARAGRAPH_SIZE_MAP[size]}`;
-
-    const baseStyle = `text-${align} font-(family-name:--font-montserrat) font-${fontWeight} ${customFontSize} ${color} ${className}`;
-
     return(
-        <p className={baseStyle}>
+        <p className={clsx("font-(family-name:--font-montserrat)", `text-${align}`, `font-${fontWeight}`, size === "custom" ? className : PARAGRAPH_SIZE_MAP[size], color, className)}>
             { children }
         </p>
     )

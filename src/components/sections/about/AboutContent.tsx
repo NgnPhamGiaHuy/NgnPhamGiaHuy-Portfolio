@@ -1,17 +1,17 @@
-import React from "react";
+import React, { useMemo } from "react";
 
 import { PERSONAL_IDENTIFIABLE_INFORMATION } from "@/constants";
 import { AboutCollapsibleSection, AboutIntroduction, AboutLayout, AboutSkillsSection, Heading, QuarterGrid, TestimonialItem } from "@/components";
 
-const AboutContent : React.FC = () => {
+const AboutContent : React.FC = React.memo(() => {
     const info = PERSONAL_IDENTIFIABLE_INFORMATION;
     
     const certificates = info.certificates;
     
-    const collapsibleSection = [
+    const collapsibleSection = useMemo(() => [
         { title: "Educations", list: info.education },
         { title: "Experiences", list: info.experience },
-    ];
+    ], [info.education, info.experience]);
     
     return (
         <div>
@@ -39,6 +39,6 @@ const AboutContent : React.FC = () => {
             </AboutLayout>
         </div>
     );
-};
+});
 
 export default AboutContent;

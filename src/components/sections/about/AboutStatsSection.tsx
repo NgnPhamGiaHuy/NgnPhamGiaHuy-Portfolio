@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useMemo } from "react";
 
 import { AnimatedStatCard } from "@/components";
 import { PERSONAL_IDENTIFIABLE_INFORMATION } from "@/constants";
 
-const AboutStatsSection : React.FC = () => {
+const AboutStatsSection : React.FC = React.memo(() => {
     const info = PERSONAL_IDENTIFIABLE_INFORMATION;
     
-    const cardList = [
+    const cardList = useMemo(() => [
         { title: "Years Of Experience", targetNumber: info.experienceYear },
         { title: "Certificates received", targetNumber: info.certificates.length.toString() },
         { title: "Projects Complete", targetNumber: info.projectsCompleted.toString() },
-    ]
+    ], [info.experience, info.certificates, info.projectsCompleted]);
 
     return (
         <div className={"max-w-192 w-full mt-12 flex flex-row grow-0 shrink basis-auto"}>
@@ -21,6 +21,6 @@ const AboutStatsSection : React.FC = () => {
             </div>
         </div>
     );
-};
+});
 
 export default AboutStatsSection;

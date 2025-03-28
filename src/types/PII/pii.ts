@@ -1,9 +1,9 @@
 import {
-  ContactProps, PortfolioProps,
-  ServiceProps,
-  SkillInterface,
-  SocialProfilesProps,
-  TimelineEntry,
+    ContactProps, FAQSectionProps, PortfolioProps,
+    ServiceProps,
+    SkillInterface,
+    SocialProfilesProps,
+    TimelineEntry,
 } from "@/types";
 
 /**
@@ -23,17 +23,18 @@ import {
  * @property {SocialProfilesProps[]} socialProfiles - Array of social media profiles
  */
 export interface PIIProps {
-  fullName: string;
-  title: string;
-  bio: string;
-  contact: ContactProps;
-  services: ServiceProps[];
-  experienceYear: string;
-  projectsCompleted: number;
-  portfolios: PortfolioProps[];
-  skills: SkillInterface[];
-  education: TimelineEntry[];
-  experience: TimelineEntry[];
-  certificates: TimelineEntry[];
-  socialProfiles: SocialProfilesProps[];
+    fullName: string;
+    title: string;
+    bio: string;
+    contact: ContactProps;
+    services: ServiceProps[];
+    experienceYear: string;
+    projectsCompleted: number;
+    faqs: FAQSectionProps[];
+    portfolios: PortfolioProps[];
+    skills: SkillInterface[];
+    education: TimelineEntry[];
+    experience: TimelineEntry[];
+    certificates: TimelineEntry[];
+    socialProfiles: SocialProfilesProps[];
 }

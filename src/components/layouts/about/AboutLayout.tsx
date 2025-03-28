@@ -4,10 +4,9 @@ import { Heading } from "@/components";
 
 interface AboutLayoutProps {
     title: string;
-    children: React.ReactNode;
 }
 
-const AboutLayout : React.FC<AboutLayoutProps> = ({ title, children }) => {
+const AboutLayout : React.FC<React.PropsWithChildren<AboutLayoutProps>> = React.memo(({ title, children }) => {
     return (
         <div>
             <div className={"h-full mt-24"}>
@@ -20,6 +19,6 @@ const AboutLayout : React.FC<AboutLayoutProps> = ({ title, children }) => {
             </div>
         </div>
     );
-};
+});
 
 export default AboutLayout;

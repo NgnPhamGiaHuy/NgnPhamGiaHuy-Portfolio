@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 import { ContactBanner, ContactContent } from "@/components";
 
-const Contact = () => {
+const Contact = React.memo(() => {
     return (
         <div>
             <div className={"max-w-full w-full flex flex-row relative"}>
@@ -15,6 +15,6 @@ const Contact = () => {
             </div>
         </div>
     );
-};
+});
 
 export default Contact;
