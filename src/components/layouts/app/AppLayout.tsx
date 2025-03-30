@@ -1,17 +1,18 @@
 "use client"
 
-import React from "react";
+import React, { useCallback, useState } from "react";
 
-import { Header, Main } from "@/components";
+import { Header, Main, SideBarMenu } from "@/components";
 
-interface AppLayoutProps {
-    activeLink: string;
-}
+const AppLayout: React.FC<React.PropsWithChildren<{ activeLink: string }>> = ({ children, activeLink }) => {
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-const AppLayout: React.FC<React.PropsWithChildren<AppLayoutProps>> = ({ children, activeLink }) => {
+    const toggleSidebar = useCallback(() => setIsSidebarOpen((prev) => !prev), []);
+
     return (
         <>
-            <Header activeLink={activeLink} />
+            <SideBarMenu activeLink={activeLink} isOpen={isSidebarOpen} onClose={toggleSidebar} />
+            <Header activeLink={activeLink} onClose={toggleSidebar} />
             <Main>{children}</Main>
         </>
     );

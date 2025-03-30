@@ -2,19 +2,19 @@
 
 import React from "react";
 
-import { PIIProps } from "@/types";
+import { PortfolioProps } from "@/types";
 import { PortfolioItem} from "@/components";
 
 interface PortfolioListProps {
-    info: PIIProps,
+    portfolios: PortfolioProps[],
     hoveredIndex: number,
     setHoveredIndex:  React.Dispatch<React.SetStateAction<number>>,
 }
 
-const PortfolioList: React.FC<PortfolioListProps> = React.memo(({ info, hoveredIndex, setHoveredIndex }) => {
+const PortfolioList: React.FC<PortfolioListProps> = React.memo(({ portfolios, hoveredIndex, setHoveredIndex }) => {
     return (
         <ul style={{ scrollbarWidth: "none" }} className={"h-[95vh] pb-12 overflow-y-scroll"}>
-            { info.portfolios.map((item, index) => (
+            { portfolios.map((item: PortfolioProps, index: number) => (
                 <PortfolioItem key={index} item={item} index={index} hoveredIndex={hoveredIndex} setHoveredIndex={setHoveredIndex}/>
             )) }
         </ul>

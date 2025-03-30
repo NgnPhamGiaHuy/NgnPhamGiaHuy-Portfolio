@@ -23,7 +23,7 @@ const AboutCollapsibleSection: React.FC<AboutCollapsibleSectionProps> = ({ title
             <div className={"h-full mt-16"}>
                 <AboutSectionTitle title={title} />
                 <div>
-                    { list.map((item, index) => (
+                    { list.map((item: TimelineEntry, index: number) => (
                         <CollapsibleItem key={index} index={index} activeIndex={activeIndex}>
                             <Heading level={4} size={"custom"} className={"text-lg uppercase break-words leading-snug"}>
                                 <button onClick={() => handleClick(index)} className={clsx({"about-button-after-active" : activeIndex === index}, "about-button after:top-6.5 after:right-0 about-button-after")}>

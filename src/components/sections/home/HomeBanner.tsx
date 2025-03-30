@@ -4,20 +4,20 @@ import { ContactButton } from "@/components";
 import { PERSONAL_IDENTIFIABLE_INFORMATION } from "@/constants";
 
 const HomeBanner: React.FC = () => {
-    const info = PERSONAL_IDENTIFIABLE_INFORMATION;
+    const { experienceYears, projectsCompleted } = PERSONAL_IDENTIFIABLE_INFORMATION;
 
     return (
-        <div className={"relative"}>
+        <div className={"relative w-fit h-fit"}>
             <img src="/banner.png" alt="Banner" className={"max-w-full h-auto"}/>
             <ContactButton
                 label={"Years Experience"}
-                numberLabel={info.experienceYear.toString()}
-                position={"top-[30%] -left-1/5"}
+                numberLabel={experienceYears.toString()}
+                position={"top-[30%] max-lg:left-[-3%] -left-1/5"}
             />
             <ContactButton
                 label={"Completed Project"}
-                numberLabel={info.projectsCompleted.toString()}
-                position={"bottom-[30%] right-0"}
+                numberLabel={projectsCompleted.toString()}
+                position={"bottom-[30%] max-lg:right-[-3%] -right-1/5"}
             />
         </div>
     );

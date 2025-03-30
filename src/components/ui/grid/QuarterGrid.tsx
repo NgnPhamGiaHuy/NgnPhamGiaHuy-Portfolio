@@ -11,7 +11,7 @@ const QuarterGrid: React.FC<QuarterGridProps> = React.memo(({ list }) => {
     return (
         <div>
             <div className={"flex flex-wrap justify-start"}>
-                { list.map((item, index) => (
+                { list.map((item: TimelineEntry, index: number) => (
                     <QuarterGridItem key={index} url={item.url} showImage={true}/>
                 )) }
             </div>

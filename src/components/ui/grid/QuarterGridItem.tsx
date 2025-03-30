@@ -6,12 +6,7 @@ import Image from "next/image";
 
 import { ImageModal } from "@/components";
 
-interface QuarterGridItemProps {
-    url?: string;
-    showImage?: boolean;
-}
-
-const QuarterGridItem: React.FC<QuarterGridItemProps> = React.memo(({ url, showImage = false }) => {
+const QuarterGridItem: React.FC<{ url?: string, showImage?: boolean }> = React.memo(({ url, showImage = false }) => {
     const [isModalOpen, setModalOpen] = useState(false);
 
     const openModal = useCallback(() => setModalOpen(true), []);

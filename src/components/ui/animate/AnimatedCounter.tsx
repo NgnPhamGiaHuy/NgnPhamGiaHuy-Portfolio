@@ -3,12 +3,7 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
-interface AnimatedCounterProps {
-    targetNumber: number;
-    duration?: number;
-}
-
-const AnimatedCounter: React.FC<AnimatedCounterProps> = React.memo(({ targetNumber, duration = 1.5 }) => {
+const AnimatedCounter: React.FC<{ targetNumber: number, duration?: number }> = React.memo(({ targetNumber, duration = 1.5 }) => {
     const [displayNumber, setDisplayNumber] = useState(0);
 
     useEffect(() => {

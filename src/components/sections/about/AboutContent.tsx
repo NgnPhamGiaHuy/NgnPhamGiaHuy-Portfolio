@@ -4,14 +4,12 @@ import { PERSONAL_IDENTIFIABLE_INFORMATION } from "@/constants";
 import { AboutCollapsibleSection, AboutIntroduction, AboutLayout, AboutSkillsSection, Heading, QuarterGrid, TestimonialItem } from "@/components";
 
 const AboutContent: React.FC = () => {
-    const info = PERSONAL_IDENTIFIABLE_INFORMATION;
-
-    const certificates = info.certificates;
+    const { certificates, educations, experiences } = PERSONAL_IDENTIFIABLE_INFORMATION;
 
     const collapsibleSection = useMemo(() => [
-        { title: "Educations", list: info.education },
-        { title: "Experiences", list: info.experience },
-    ], [info.education, info.experience]);
+        { title: "Educations", list: educations },
+        { title: "Experiences", list: experiences },
+    ], [educations, experiences]);
 
     return (
         <div>
@@ -24,7 +22,7 @@ const AboutContent: React.FC = () => {
                     </Heading>
                 </div>
             </div>
-            { collapsibleSection.map((section, index) => (
+            { collapsibleSection.map((section, index:number) => (
                 <AboutCollapsibleSection key={index} title={section.title} list={section.list} />
             )) }
             <AboutLayout title={"Certificates"}>

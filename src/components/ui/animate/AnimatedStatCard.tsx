@@ -2,11 +2,6 @@ import React from "react";
 
 import { AnimatedCounter } from "@/components";
 
-interface AnimatedStatCardProps {
-    title: string;
-    targetNumber: string;
-}
-
 const extractNumberAndSuffix = (input: string): { number: number; suffix: string } => {
     const match = input.match(/(\d+)(\D*)/);
     const number = match ? parseInt(match[1], 10) : 0;
@@ -15,7 +10,7 @@ const extractNumberAndSuffix = (input: string): { number: number; suffix: string
     return { number, suffix };
 };
 
-const AnimatedStatCard: React.FC<AnimatedStatCardProps> = React.memo(({ title, targetNumber }) => {
+const AnimatedStatCard: React.FC<{ title:string, targetNumber: string }> = React.memo(({ title, targetNumber }) => {
     const { number, suffix } = extractNumberAndSuffix(targetNumber);
     
     return (

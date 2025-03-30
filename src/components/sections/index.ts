@@ -9,7 +9,9 @@ export { default as AboutStatsSection } from "@/components/sections/about/AboutS
 
 export { default as Contact } from "@/components/sections/contact/Contact";
 export { default as ContactBanner } from "@/components/sections/contact/ContactBanner";
+export { default as ContactBannerItem } from "@/components/sections/contact/ContactBannerItem";
 export { default as ContactContent } from "@/components/sections/contact/ContactContent";
+export { default as ContactItem } from "@/components/sections/contact/ContactItem";
 
 export { default as FAQ } from "@/components/sections/faq/FAQ";
 export { default as FAQBanner } from "@/components/sections/faq/FAQBanner";
@@ -27,5 +29,9 @@ export { default as PortfolioPreview } from "@/components/sections/portfolio/Por
 export { default as Service } from "@/components/sections/service/Service";
 export { default as ServiceBanner } from "@/components/sections/service/ServiceBanner";
 export { default as ServiceContent } from "@/components/sections/service/ServiceContent";
+
+export { default as SidebarHeader } from "@/components/sections/sidebar/SidebarHeader";
+export { default as SideBarMenu } from "@/components/sections/sidebar/SideBarMenu";
+export { default as SidebarMenuList } from "@/components/sections/sidebar/SidebarMenuList";
 
 export { default as SectionTitle } from "@/components/sections/title/SectionTitle";

@@ -1,2 +1,2 @@
-export * from "@/types/PII";
+export * from "@/types/pii";
 export * from "@/types/ui";

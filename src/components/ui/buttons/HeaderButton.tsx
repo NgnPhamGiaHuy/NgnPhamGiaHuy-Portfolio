@@ -5,13 +5,7 @@ import Link from "next/link";
 import React, { useMemo } from "react";
 import { RxArrowTopRight } from "react-icons/rx";
 
-interface HeaderButtonProps {
-    link: string;
-    title: string;
-    active?: boolean;
-}
-
-const HeaderButton: React.FC<HeaderButtonProps> = React.memo(({ link, title, active = false }) => {
+const HeaderButton: React.FC<{ link: string, title:string, active?:boolean }> = React.memo(({ link, title, active = false }) => {
     const listItemClass = useMemo(() => 
         clsx("w-full flex-center border-r border-solid border-primary-2 relative header-button-after header-button-hover group", {
             "bg-primary-2": active

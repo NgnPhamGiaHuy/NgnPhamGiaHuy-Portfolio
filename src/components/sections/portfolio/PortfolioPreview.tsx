@@ -1,15 +1,16 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { PortfolioProps } from "@/types";
 
 interface PortfolioPreviewProps {
-    portfolios: any[];
+    portfolios: PortfolioProps[];
     hoveredIndex: number;
 }
 
 const PortfolioPreview: React.FC<PortfolioPreviewProps> = ({ portfolios, hoveredIndex }) => (
     <div className={"mr-1/10 py-12"}>
         <ul>
-            { portfolios.map((item, index) => (
+            { portfolios.map((item: PortfolioProps, index: number) => (
                 <motion.li
                     key={index}
                     initial={{ opacity: 0, scale: 1.1, clipPath: "inset(0 100% 0 0)" }}

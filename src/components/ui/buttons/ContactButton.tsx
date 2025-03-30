@@ -8,13 +8,7 @@ import { GoArrowDownLeft } from "react-icons/go";
 
 import { Heading } from "@/components";
 
-interface ContactButtonProps {
-    label: string;
-    position: string;
-    numberLabel: string;
-}
-
-const ContactButton : React.FC<ContactButtonProps> = React.memo(({ label, position, numberLabel }) => {
+const ContactButton : React.FC<{ label: string, position: string, numberLabel: string }> = React.memo(({ label, position, numberLabel }) => {
     const buttonVariants = {
         initial: { backgroundColor: "#F7F6F1" },
         hover: { backgroundColor: "var(--color-primary-1)" }
@@ -35,17 +29,17 @@ const ContactButton : React.FC<ContactButtonProps> = React.memo(({ label, positi
             <motion.div
                 className={clsx(
                     position,
-                    "px-4 py-2 flex-center bg-[#F7F6F1] border-3 border-r-8 border-b-8 border-solid border-primary-2 rounded-full absolute overflow-hidden z-[1]"
+                    "px-4 py-2 flex-center bg-[#F7F6F1] border-3 max-sm:border-r-5 border-r-8 max-sm:border-b-5 border-b-8 border-solid border-primary-2 rounded-full absolute overflow-hidden z-[1]"
                 )}
                 initial="initial"
                 whileHover="hover"
                 variants={buttonVariants}
             >
                 <motion.div className={"flex items-center gap-2"} variants={textVariants} transition={{ duration: 0.3 }}>
-                    <Heading level={3} size={"custom"} color={"text-primary-1"} className={"text-3xl leading-none"}>
+                    <Heading level={3} size={"custom"} color={"text-primary-1"} className={"max-sm:text-xl text-3xl leading-none"}>
                         { numberLabel }
                     </Heading>
-                    <span className={"pl-2 text-sm font-medium border-l border-solid border-[#D9D9D9] leading-5"}>
+                    <span className={"max-sm:pl-1 pl-2 max-sm:text-xs text-sm text-title font-medium border-l border-solid border-[#D9D9D9] max-sm:leading-4 leading-5"}>
                         { label.split(" ").map((word, index) => (
                             <React.Fragment key={index}>
                                 { word }

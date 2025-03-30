@@ -2,11 +2,7 @@ import React from "react";
 
 import { Heading } from "@/components";
 
-interface AboutLayoutProps {
-    title: string;
-}
-
-const AboutLayout: React.FC<React.PropsWithChildren<AboutLayoutProps>> = ({ title, children }) => {
+const AboutLayout: React.FC<React.PropsWithChildren<{ title: string }>> = ({ title, children }) => {
     return (
         <div>
             <div className={"h-full mt-24"}>
