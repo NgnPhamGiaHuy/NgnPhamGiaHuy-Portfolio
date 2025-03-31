@@ -21,7 +21,7 @@ const SidebarMenuList: React.FC<{ activeLink: string }> = ({ activeLink }) => {
                     </Link>
                 </li>
             )),
-        [HEADER_NAV, activeLink]
+        [activeLink]
     );
 
     return (
@@ -32,5 +32,7 @@ const SidebarMenuList: React.FC<{ activeLink: string }> = ({ activeLink }) => {
         </div>
     );
 };
+
+SidebarMenuList.displayName = "SidebarMenuList";
 
 export default SidebarMenuList;

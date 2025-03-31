@@ -10,7 +10,7 @@ const HomeIntroduction: React.FC = () => {
     return (
         <div>
             <Heading level={1} size={"custom"} className={"mb-4 max-sm:text-4xl max-md:text-[3.125rem] max-xl:text-[3.375rem] max-2xl:text-[3.625rem] max-2xl-mid:text-[5rem] text-[5.375rem] leading-snug"} >
-                I'm { fullName }
+                I&apos;m { fullName }
             </Heading>
             <div className={"max-sm:mb-6 mb-8"}>
                 <Heading level={2} color={"text-text"} fontWeight={"medium"} size={"custom"} className={"max-sm:text-base text-lg leading-none"}>

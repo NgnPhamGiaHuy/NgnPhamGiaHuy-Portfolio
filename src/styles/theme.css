@@ -1,0 +1,41 @@
+@theme {
+    --breakpoint-2xl-low: 104.0rem; /* 1664px */
+    --breakpoint-2xl-mid: 106.25rem; /* 1700px */
+    --breakpoint-2xl-high: 112.5rem; /* 1800px */
+    --breakpoint-3xl: 120rem; /* 1920px */
+    --breakpoint-4xl: 160rem;
+}
+
+@theme {
+    --font-unbounded: 'Unbounded', sans-serif;
+    --font-montserrat: 'Montserrat', sans-serif;
+
+    --text-large: 5.375rem;
+
+    /* Light Mode Colors */
+    --color-white: #fff;
+    --color-dark-white: #fff;
+    --color-black: #000;
+    --color-light-black: #242627;
+    --color-title: #222222;
+    --color-dark-title: #222222;
+    --color-title-opc: 34, 34, 34;
+    --color-text: #4B4B52;
+    --color-text-opc: 75, 75, 82;
+
+    /* Theme Colors */
+    --color-primary-1: #ED5221;
+    --color-primary-1-opc: 237, 82, 33;
+    --color-primary-2: #222222;
+    --color-dark-primary-2: #222222;
+    --color-primary-2-opc: 34, 34, 34;
+
+    /* Borders */
+    --color-border: #eee;
+    --color-border-2: #4B4B52;
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+}

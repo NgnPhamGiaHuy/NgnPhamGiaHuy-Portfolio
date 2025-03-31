@@ -61,4 +61,6 @@ const ContactButton : React.FC<{ label: string, position: string, numberLabel: s
     );
 });
 
+ContactButton.displayName = "ContactButton";
+
 export default ContactButton;

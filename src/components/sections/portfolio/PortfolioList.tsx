@@ -21,4 +21,6 @@ const PortfolioList: React.FC<PortfolioListProps> = React.memo(({ portfolios, ho
     );
 });
 
+PortfolioList.displayName = "PortfolioList";
+
 export default PortfolioList;

@@ -12,4 +12,6 @@ const Paragraph: React.FC<TypographyProps> = React.memo(({ children, size = "md"
     )
 });
 
+Paragraph.displayName = "Paragraph";
+
 export default Paragraph;

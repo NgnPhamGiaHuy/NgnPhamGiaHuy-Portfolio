@@ -2,7 +2,7 @@ import React from "react";
 
 import { FAQBanner, FAQContent } from "@/components";
 
-const Faq: React.FC = () => {
+const FAQ: React.FC = () => {
     return (
         <div>
             <div className={"max-w-full w-full flex flex-row relative"}>
@@ -17,4 +17,4 @@ const Faq: React.FC = () => {
     );
 };
 
-export default Faq;
+export default FAQ;

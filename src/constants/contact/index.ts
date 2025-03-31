@@ -1,1 +1,1 @@
-export * from "@/constants/contact/contacts";
+export * from "./contacts";

@@ -14,14 +14,14 @@ const AnimatedStatCard: React.FC<{ title:string, targetNumber: string }> = React
     const { number, suffix } = extractNumberAndSuffix(targetNumber);
     
     return (
-        <div className={"max-w-full w-48"}>
+        <div className={"max-w-full max-xl:w-40 w-48"}>
             <div className={"flex flex-col-reverse items-stretch justify-center gap-2"}>
                 <div className={"flex-center flex-1"}>
-                    <span className={"text-lg text-text font-normal font-(family-name:--font-montserrat) leading-8"}>
+                    <span className={"max-sm:text-sm text-lg text-text max-xl:text-center font-normal font-(family-name:--font-montserrat) max-sm:leading-5 leading-8"}>
                         { title }
                     </span>
                 </div>
-                <div className={"flex flex-1 text-[40px] text-title text-center font-bold leading-10"}>
+                <div className={"flex flex-1 max-sm:text-3xl text-[40px] text-title text-center font-bold leading-10"}>
                     <div className={"text-end whitespace-pre-wrap grow"}></div>
                     <AnimatedCounter targetNumber={number} />
                     { suffix && (
@@ -35,5 +35,7 @@ const AnimatedStatCard: React.FC<{ title:string, targetNumber: string }> = React
         </div>
     );
 });
+
+AnimatedStatCard.displayName = "AnimatedStatCard";
 
 export default AnimatedStatCard;

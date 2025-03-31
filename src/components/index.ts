@@ -1,3 +1,3 @@
-export * from "@/components/layouts";
-export * from "@/components/sections";
-export * from "@/components/ui";
+export * from "./layouts";
+export * from "./sections";
+export * from "./ui";

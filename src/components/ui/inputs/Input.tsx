@@ -35,4 +35,6 @@ const Input: React.FC<InputProps> = React.memo(({ id, label, type = "text", isFi
     );
 });
 
+Input.displayName = "Input";
+
 export default Input;

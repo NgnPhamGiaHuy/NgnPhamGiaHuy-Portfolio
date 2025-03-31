@@ -4,7 +4,7 @@ import { ContactButton } from "@/components";
 import { PERSONAL_IDENTIFIABLE_INFORMATION } from "@/constants";
 
 const HomeBanner: React.FC = () => {
-    const { experienceYears, projectsCompleted } = PERSONAL_IDENTIFIABLE_INFORMATION;
+    const { experienceYears, projects } = PERSONAL_IDENTIFIABLE_INFORMATION;
 
     return (
         <div className={"relative w-fit h-fit"}>
@@ -16,7 +16,7 @@ const HomeBanner: React.FC = () => {
             />
             <ContactButton
                 label={"Completed Project"}
-                numberLabel={projectsCompleted.toString()}
+                numberLabel={projects.length.toString()}
                 position={"bottom-[30%] max-lg:right-[-3%] -right-1/5"}
             />
         </div>

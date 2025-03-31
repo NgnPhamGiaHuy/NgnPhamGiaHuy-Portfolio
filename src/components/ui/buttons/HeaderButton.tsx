@@ -33,4 +33,6 @@ const HeaderButton: React.FC<{ link: string, title:string, active?:boolean }> = 
     );
 });
 
+HeaderButton.displayName = "HeaderButton";
+
 export default HeaderButton;

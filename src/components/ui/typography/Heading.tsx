@@ -19,4 +19,6 @@ const Heading: React.FC<HeadingProps> = React.memo(({ children, level = 1, size 
     );
 });
 
+Heading.displayName = "Heading";
+
 export default Heading;

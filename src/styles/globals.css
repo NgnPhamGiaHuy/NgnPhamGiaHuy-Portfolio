@@ -1,88 +1,16 @@
 @import "tailwindcss";
-@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+@import "./base.css";
+@import "./theme.css";
+@import "./components.css";
+
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
 @plugin "./plugin/custom.ts";
-@plugin "@tailwindcss/aspect-ratio";
+
 :root {
     --background: #F7F6F1;
     --foreground: #171717;
-}
-
-/* Base REM configuration */
-@layer base {
-    html {
-        font-size: 16px;
-    }
-}
-
-@layer components {
-    .header-button-after {
-        @apply after:w-full after:h-0 after:top-0 after:right-0 after:bottom-0 after:left-0 after:absolute after:z-[-1] after:bg-primary-2 after:ease-out after:duration-450;
-    }
-    .header-button-hover {
-        @apply hover:after:h-full hover:after:top-[unset] hover:after:bottom-0;
-    }
-    .about-heading-before {
-        @apply before:w-4/5 before:h-[2px] before:left-0 before:bottom-[2px] before:bg-primary-2 before:absolute;
-    }
-    .about-button {
-        @apply w-full pb-4 text-title text-left font-medium font-(family-name:--font-unbounded) uppercase border-b-2 border-solid border-primary-2 leading-normal relative cursor-pointer;
-    }
-    .about-button-after {
-        @apply after:w-9 after:h-9 after:content-["\f068"]
-        after:flex-center after:text-xl after:font-semibold after:rounded-full
-        after:border after:border-r-3 after:border-b-3 after:border-solid after:border-primary-2
-        after:bg-[#F7F6F1] after:absolute hover:after:border-primary-1 hover:after:text-primary-1
-        after:duration-350 after:transition-all after:font-["Font_Awesome_5_Free"]
-        after:rotate-0;
-    }
-    .about-button-after-active {
-        @apply after:content-["\2b"] after:rotate-180;
-    }
-    .download-cv-button-after {
-        @apply after:max-sm:w-6 after:w-8 after:h-[1px] after:top-1/2 after:max-sm:-right-6 after:-right-8 after:-translate-y-1/2 after:absolute after:transition-all after:duration-300;
-    }
-}
-
-@theme {
-    --breakpoint-2xl-low: 104.0rem; /* 1664px */
-    --breakpoint-2xl-mid: 106.25rem; /* 1700px */
-    --breakpoint-2xl-high: 112.5rem; /* 1800px */
-    --breakpoint-3xl: 120rem; /* 1920px */
-    --breakpoint-4xl: 160rem;
-}
-
-@theme {
-    --font-unbounded: 'Unbounded', sans-serif;
-    --font-montserrat: 'Montserrat', sans-serif;
-
-    --text-large: 5.375rem;
-
-    /* Light Mode Colors */
-    --color-white: #fff;
-    --color-dark-white: #fff;
-    --color-black: #000;
-    --color-light-black: #242627;
-    --color-title: #222222;
-    --color-dark-title: #222222;
-    --color-title-opc: 34, 34, 34;
-    --color-text: #4B4B52;
-    --color-text-opc: 75, 75, 82;
-
-    /* Theme Colors */
-    --color-primary-1: #ED5221;
-    --color-primary-1-opc: 237, 82, 33;
-    --color-primary-2: #222222;
-    --color-dark-primary-2: #222222;
-    --color-primary-2-opc: 34, 34, 34;
-
-    /* Borders */
-    --color-border: #eee;
-    --color-border-2: #4B4B52;
-}
-
-@theme inline {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -122,4 +50,3 @@ body.dark {
 
     background-color: #121212;
 }
-

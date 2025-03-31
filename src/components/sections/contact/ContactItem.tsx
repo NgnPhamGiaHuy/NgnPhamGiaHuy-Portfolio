@@ -4,13 +4,13 @@ import { Heading } from "@/components";
 import Link from "next/link";
 import { ContactItemProps } from "@/types";
 
-interface ContactItem {
+interface ContactItems {
     index: number;
     arrayIndex: number;
     contact: ContactItemProps;
 }
 
-const ContactItem: React.FC<ContactItem> = ({ index, arrayIndex, contact }) => {
+const ContactItem: React.FC<ContactItems> = ({ index, arrayIndex, contact }) => {
     return (
         <li className={clsx({ "mb-8": index !== arrayIndex - 1 }, "max-w-full w-full flex items-center gap-4")}>
             <div className={"max-w-10 min-w-10 w-10 max-h-10 min-h-10 h-10 flex-center rounded-full border border-solid border-title hover:text-white hover:bg-primary-1 transition-all"}>

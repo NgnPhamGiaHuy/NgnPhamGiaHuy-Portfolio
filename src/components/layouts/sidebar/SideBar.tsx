@@ -37,4 +37,6 @@ const SideBar: React.FC<SideBarProps> = React.memo(({ list }) => {
     );
 }, (prevProps, nextProps) => JSON.stringify(prevProps.list) === JSON.stringify(nextProps.list));
 
+SideBar.displayName = "SideBar";
+
 export default SideBar;

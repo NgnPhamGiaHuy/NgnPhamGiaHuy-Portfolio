@@ -13,7 +13,7 @@ const QuarterGridItem: React.FC<{ url?: string, showImage?: boolean }> = React.m
     const closeModal = useCallback(() => setModalOpen(false), []);
 
     return (
-        <div className={"w-1/4 flex-none-auto"}>
+        <div className={"max-md:w-1/2 max-2xl-mid:w-1/3 w-1/4 flex-none-auto"}>
             { showImage ? (
                 <>
                     <div onClick={openModal} className={"px-2 py-4 flex-center border-[0.5px] border-solid border-primary-2-opc/5 cursor-pointer"}>
@@ -31,5 +31,7 @@ const QuarterGridItem: React.FC<{ url?: string, showImage?: boolean }> = React.m
         </div>
     );
 });
+
+QuarterGridItem.displayName = "QuarterGridItem";
 
 export default QuarterGridItem;

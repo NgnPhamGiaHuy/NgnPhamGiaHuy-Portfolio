@@ -10,8 +10,8 @@ interface BannerProps {
 const Banner: React.FC<React.PropsWithChildren<BannerProps>> = ({ children, padding, align = "center", justify = "start" }) => {
     return (
         <div className={"h-full"}>
-            <div className={"sticky top-0"}>
-                <div className={clsx("h-screen", padding, `items-${align}`, `justify-${justify}`, "flex flex-col bg-[#FBDACF]")}>
+            <div className={"sticky max-sm:px-3 max-md:px-6 max-lg:px-9 top-0"}>
+                <div className={clsx("max-lg:h-[unset] h-screen", padding, `items-${align}`, `justify-${justify}`, "flex flex-col max-lg:justify-center bg-[#FBDACF]")}>
                     { children }
                 </div>
             </div>

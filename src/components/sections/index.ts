@@ -1,37 +1,30 @@
-export { default as About } from "@/components/sections/about/About";
-export { default as AboutBanner } from "@/components/sections/about/AboutBanner";
-export { default as AboutCollapsibleSection } from "@/components/sections/about/AboutCollapsibleSection";
-export { default as AboutContent } from "@/components/sections/about/AboutContent";
-export { default as AboutIntroduction } from "@/components/sections/about/AboutIntroduction";
-export { default as AboutSectionTitle } from "@/components/sections/about/AboutSectionTitle";
-export { default as AboutSkillsSection } from "@/components/sections/about/AboutSkillsSection";
-export { default as AboutStatsSection } from "@/components/sections/about/AboutStatsSection";
-
-export { default as Contact } from "@/components/sections/contact/Contact";
-export { default as ContactBanner } from "@/components/sections/contact/ContactBanner";
-export { default as ContactBannerItem } from "@/components/sections/contact/ContactBannerItem";
-export { default as ContactContent } from "@/components/sections/contact/ContactContent";
-export { default as ContactItem } from "@/components/sections/contact/ContactItem";
-
-export { default as FAQ } from "@/components/sections/faq/FAQ";
-export { default as FAQBanner } from "@/components/sections/faq/FAQBanner";
-export { default as FAQContent } from "@/components/sections/faq/FAQContent";
-
-export { default as Home } from "@/components/sections/home/Home";
-export { default as HomeBanner } from "@/components/sections/home/HomeBanner";
-export { default as HomeIntroduction } from "@/components/sections/home/HomeIntroduction";
-
-export { default as Portfolio } from "@/components/sections/portfolio/Portfolio";
-export { default as PortfolioItem } from "@/components/sections/portfolio/PortfolioItem";
-export { default as PortfolioList } from "@/components/sections/portfolio/PortfolioList";
-export { default as PortfolioPreview } from "@/components/sections/portfolio/PortfolioPreview";
-
-export { default as Service } from "@/components/sections/service/Service";
-export { default as ServiceBanner } from "@/components/sections/service/ServiceBanner";
-export { default as ServiceContent } from "@/components/sections/service/ServiceContent";
-
-export { default as SidebarHeader } from "@/components/sections/sidebar/SidebarHeader";
-export { default as SideBarMenu } from "@/components/sections/sidebar/SideBarMenu";
-export { default as SidebarMenuList } from "@/components/sections/sidebar/SidebarMenuList";
-
-export { default as SectionTitle } from "@/components/sections/title/SectionTitle";
+export { default as About } from "./about/About";
+export { default as AboutBanner } from "./about/AboutBanner";
+export { default as AboutCollapsibleSection } from "./about/AboutCollapsibleSection";
+export { default as AboutContent } from "./about/AboutContent";
+export { default as AboutIntroduction } from "./about/AboutIntroduction";
+export { default as AboutSectionTitle } from "./about/AboutSectionTitle";
+export { default as AboutSkillsSection } from "./about/AboutSkillsSection";
+export { default as AboutStatsSection } from "./about/AboutStatsSection";
+export { default as Contact } from "./contact/Contact";
+export { default as ContactBanner } from "./contact/ContactBanner";
+export { default as ContactBannerItem } from "./contact/ContactBannerItem";
+export { default as ContactContent } from "./contact/ContactContent";
+export { default as ContactItem } from "./contact/ContactItem";
+export { default as FAQ } from "./faq/FAQ";
+export { default as FAQBanner } from "./faq/FAQBanner";
+export { default as FAQContent } from "./faq/FAQContent";
+export { default as Home } from "./home/Home";
+export { default as HomeBanner } from "./home/HomeBanner";
+export { default as HomeIntroduction } from "./home/HomeIntroduction";
+export { default as Portfolio } from "./portfolio/Portfolio";
+export { default as PortfolioItem } from "./portfolio/PortfolioItem";
+export { default as PortfolioList } from "./portfolio/PortfolioList";
+export { default as PortfolioPreview } from "./portfolio/PortfolioPreview";
+export { default as Service } from "./service/Service";
+export { default as ServiceBanner } from "./service/ServiceBanner";
+export { default as ServiceContent } from "./service/ServiceContent";
+export { default as SideBarMenu } from "./sidebar/SideBarMenu";
+export { default as SidebarHeader } from "./sidebar/SidebarHeader";
+export { default as SidebarMenuList } from "./sidebar/SidebarMenuList";
+export { default as SectionTitle } from "./title/SectionTitle";

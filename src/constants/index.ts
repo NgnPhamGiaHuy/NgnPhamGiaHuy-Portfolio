@@ -1,3 +1,3 @@
-export * from "@/constants/contact";
-export * from "@/constants/pii";
-export * from "@/constants/ui";
+export * from "./contact";
+export * from "./pii";
+export * from "./ui";

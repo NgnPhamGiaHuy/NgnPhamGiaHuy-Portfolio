@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import React from "react";
 
 import { TypographyProps } from "@/types";
@@ -18,7 +19,7 @@ const Button: React.FC<React.PropsWithChildren<ButtonProps>> = React.memo(({ col
     };
     
     return (
-        <button onClick={onClick} className={`${colorMap[color]} ${className} cursor-pointer relative`}>
+        <button onClick={onClick} className={clsx(colorMap[color], className, disabled, "cursor-pointer relative")}>
             <div className={`${BUTTON_SIZE_MAP[size]} border border-t-5 border-r-5 border-solid transition-all duration-300`}>
                 <span className="font-semibold whitespace-nowrap leading-none">
                     { children }
@@ -27,5 +28,7 @@ const Button: React.FC<React.PropsWithChildren<ButtonProps>> = React.memo(({ col
         </button>
     );
 });
+
+Button.displayName = "Button";
 
 export default Button;

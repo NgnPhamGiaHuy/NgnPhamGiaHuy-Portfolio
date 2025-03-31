@@ -15,7 +15,7 @@ const Header: React.FC<{ activeLink: string; onClose: () => void }> = React.memo
             HEADER_NAV.map((item: HeaderNavProps, index: number) => (
                 <HeaderButton key={index} link={item.link} title={item.title} active={item.link === activeLink} />
             )),
-        [HEADER_NAV, activeLink] 
+        [activeLink] 
     );
 
     return (
@@ -37,5 +37,7 @@ const Header: React.FC<{ activeLink: string; onClose: () => void }> = React.memo
         </div>
     );
 }, (prevProps, nextProps) => prevProps.activeLink === nextProps.activeLink); 
+
+Header.displayName = "Header";
 
 export default Header;

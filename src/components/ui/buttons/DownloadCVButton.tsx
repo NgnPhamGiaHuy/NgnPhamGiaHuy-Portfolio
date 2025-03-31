@@ -22,4 +22,6 @@ const DownloadCVButton: React.FC<LinkButtonProps> = React.memo(({ fileName, colo
     );
 });
 
+DownloadCVButton.displayName = "DownloadCVButton";
+
 export default DownloadCVButton;

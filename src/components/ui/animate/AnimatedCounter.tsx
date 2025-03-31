@@ -25,4 +25,6 @@ const AnimatedCounter: React.FC<{ targetNumber: number, duration?: number }> = R
     );
 });
 
+AnimatedCounter.displayName = "AnimatedCounter";
+
 export default AnimatedCounter;

@@ -1,3 +1,5 @@
+"use client"
+
 import React, { Fragment, useRef } from "react";
 import Image from "next/image";
 import { Dialog, Transition } from "@headlessui/react";
@@ -35,5 +37,7 @@ const ImageModal: React.FC<ImageModalProps> = React.memo(({ isOpen, onClose, url
         </Transition>
     );
 });
+
+ImageModal.displayName = "ImageModal";
 
 export default ImageModal;

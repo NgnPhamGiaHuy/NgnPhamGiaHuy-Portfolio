@@ -4,8 +4,10 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+import { PortfolioProps } from "@/types";
+
 interface PortfolioItemProps {
-    item: any;
+    item: PortfolioProps;
     index: number;
     hoveredIndex: number;
     setHoveredIndex: (index: number) => void;
@@ -75,5 +77,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = React.memo(({ item, index, h
         </motion.li>
     );
 });
+
+PortfolioItem.displayName = "PortfolioItem";
 
 export default PortfolioItem;

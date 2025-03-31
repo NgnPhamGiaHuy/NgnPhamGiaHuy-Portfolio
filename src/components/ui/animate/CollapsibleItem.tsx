@@ -27,4 +27,6 @@ const CollapsibleItem : React.FC<React.PropsWithChildren<CollapsibleItemProps>> 
     );
 });
 
+CollapsibleItem.displayName = "CollapsibleItem";
+
 export default CollapsibleItem;

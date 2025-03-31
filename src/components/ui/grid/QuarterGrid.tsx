@@ -19,4 +19,6 @@ const QuarterGrid: React.FC<QuarterGridProps> = React.memo(({ list }) => {
     );
 });
 
+QuarterGrid.displayName = "QuarterGrid";
+
 export default QuarterGrid;

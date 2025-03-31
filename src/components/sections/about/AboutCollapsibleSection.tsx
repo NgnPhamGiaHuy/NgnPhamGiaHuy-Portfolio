@@ -4,7 +4,7 @@ import clsx from "clsx";
 import React, { useCallback, useState } from "react";
 
 import { TimelineEntry } from "@/types";
-import { AboutSectionTitle, CollapsibleItem, Heading } from "@/components";
+import { AboutSectionTitle, CollapsibleItem, Heading, Paragraph } from "@/components";
 
 interface AboutCollapsibleSectionProps {
     title: string;
@@ -20,21 +20,21 @@ const AboutCollapsibleSection: React.FC<AboutCollapsibleSectionProps> = ({ title
 
     return (
         <div>
-            <div className={"h-full mt-16"}>
+            <div className={"h-full max-md:mt-10 max-xl:mt-12 mt-16"}>
                 <AboutSectionTitle title={title} />
                 <div>
                     { list.map((item: TimelineEntry, index: number) => (
                         <CollapsibleItem key={index} index={index} activeIndex={activeIndex}>
-                            <Heading level={4} size={"custom"} className={"text-lg uppercase break-words leading-snug"}>
-                                <button onClick={() => handleClick(index)} className={clsx({"about-button-after-active" : activeIndex === index}, "about-button after:top-6.5 after:right-0 about-button-after")}>
+                            <Heading level={4} size={"custom"} className={"max-sm:text-sm max-xl:text-base text-lg uppercase break-words leading-snug"}>
+                                <button onClick={() => handleClick(index)} className={clsx({"about-button-after-active" : activeIndex === index}, "about-button about-button-after")}>
                                     { item.title }
                                 </button>
                             </Heading>
                             <div className={"mb-4 flex-between flex-wrap gap-4"}>
-                                <Heading level={5} size={"custom"} fontWeight={"semibold"} className={"text-xl italic leading-normal"}>
+                                <Heading level={5} size={"custom"} fontWeight={"semibold"} className={"max-sm:text-base text-xl italic leading-normal"}>
                                     { item.subtitle }
                                 </Heading>
-                                <span className={"text-base text-title italic font-medium leading-none"}>
+                                <span className={"max-sm:text-sm text-base text-title italic font-medium leading-none"}>
                                     { item.year.split(" - ")[0]} - &nbsp;
                                     { ["present", "now"].includes(item.year.split(" - ")[1]?.toLowerCase()) ? (
                                         <strong className={"text-primary-1 uppercase"}>{ item.year.split(" - ")[1] }</strong>
@@ -43,9 +43,9 @@ const AboutCollapsibleSection: React.FC<AboutCollapsibleSectionProps> = ({ title
                                     ) }
                                 </span>
                             </div>
-                            <p>
+                            <Paragraph size={"custom"} className={"max-sm:text-sm text-base leading-[1.8]"}>
                                 { item.description }
-                            </p>
+                            </Paragraph>
                         </CollapsibleItem>
                     )) }
                 </div>
