@@ -13,7 +13,7 @@ interface PortfolioListProps {
 
 const PortfolioList: React.FC<PortfolioListProps> = React.memo(({ portfolios, hoveredIndex, setHoveredIndex }) => {
     return (
-        <ul style={{ scrollbarWidth: "none" }} className={"h-[95vh] pb-12 overflow-y-scroll"}>
+        <ul style={{ scrollbarWidth: "none" }} className={"max-lg:h-[unset] h-[95vh] max-sm:pr-8 max-lg:pr-12 max-lg:pb-0 pb-12 overflow-y-scroll"}>
             { portfolios.map((item: PortfolioProps, index: number) => (
                 <PortfolioItem key={index} item={item} index={index} hoveredIndex={hoveredIndex} setHoveredIndex={setHoveredIndex}/>
             )) }

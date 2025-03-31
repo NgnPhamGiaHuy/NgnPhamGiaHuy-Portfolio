@@ -20,14 +20,15 @@ const PortfolioPreview: React.FC<PortfolioPreviewProps> = ({ portfolios, hovered
                         clipPath: hoveredIndex === index ? "inset(0 0 0 0)" : "inset(0 100% 0 0)",
                     }}
                     transition={{ duration: 0.8, ease: [0.78, 0.2, 0.21, 0.88] }}
-                    className={`${hoveredIndex === index ? "active relative qodef-animate-image-in" : "hidden relative"}`}
+                    className={`${hoveredIndex === index ? "block qodef-animate-image-in" : "hidden"} relative`}
                 >
-                    <div className="min-h-190 h-full top-0 left-0 absolute"></div>
-                    <img
-                        src="/portfolio_demo.png"
-                        alt="Portfolio Demo"
-                        className="max-w-144 max-h-192 h-full border-3 border-t-20 border-r-20 border-solid border-primary-2 rounded-[95rem] object-cover relative z-[1]"
-                    />
+                    <div className="max-xl:min-h-125 max-2xl:min-h-150 min-h-190 h-full top-0 left-0 relative">
+                        <img
+                            src="/portfolio_demo.png"
+                            alt="Portfolio Demo"
+                            className="max-xl:max-w-112 max-2xl:max-w-126 max-w-144 max-h-190 h-full border-3 border-t-20 border-r-20 border-solid border-primary-2 rounded-[95rem] object-cover relative z-[15]"
+                        />
+                    </div>
                 </motion.li>
             )) }
         </ul>

@@ -29,7 +29,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = React.memo(({ item, index, h
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "left",
             }}
-            className="py-8 px-4 border border-t-0 border-l-0 border-solid border-primary-1/50 rounded-r-[12.5rem]"
+            className="max-md:pr-5 max-md:pl-2 max-md:py-6 max-lg:py-8 max-2xl:py-9 py-10 max-2xl:px-5 px-6 border border-t-0 border-l-0 border-solid border-primary-1/50 rounded-r-[12.5rem]"
         >
             <Link href={"/"}>
                 <motion.span
@@ -68,7 +68,7 @@ const PortfolioItem: React.FC<PortfolioItemProps> = React.memo(({ item, index, h
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: hoveredIndex === index ? "transparent" : "initial",
                 }}
-                className="text-4xl font-medium uppercase leading-tight"
+                className="max-sm:text-xl max-md:text-2xl max-xl:text-3xl text-4xl font-medium uppercase leading-tight"
             >
                 <Link href={"/"}>
                     { item.title }
