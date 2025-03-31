@@ -2,13 +2,15 @@
     .responsive-heading-size {
         @apply max-sm:text-[1.75rem] max-2xl:text-[2.275rem] max-2xl-mid:text-[3.125rem] text-[3.4375rem]
     }
+    .responsive-margin-banner {
+        @apply max-sm:mx-2 max-md:mx-6 max-lg:mx-8
+    }
     .responsive-padding-banner {
         @apply max-md:pt-12 pt-16
         max-sm:pr-3 max-md:pr-6 max-lg:pr-9 max-xl:pr-5 max-2xl:pr-6 pr-20
         max-md:pb-12 max-lg:pb-16 max-2xl:pb-50 pb-55
         max-sm:pl-3 max-md:pl-6 max-lg:pl-9 max-xl:pl-5 max-2xl:pl-6 pl-20;
     }
-
     .responsive-padding-content {
         @apply max-lg:pt-0 pt-16
         max-sm:pr-3 max-md:pr-6 max-lg:pr-9 max-2xl:pr-12 max-2xl-mid:pr-16 pr-32

@@ -12,11 +12,11 @@ interface InputProps {
 }
 
 const Input: React.FC<InputProps> = React.memo(({ id, label, type = "text", isFilled = false, placeholder = "", isTextarea = false, width = "full" }) => {
-    const widthClass = width === "full" ? "w-full" : "w-1/2";
+    const widthClass = width === "full" ? "w-full" : "max-sm:w-full w-1/2";
 
     return (
-        <div className={clsx(widthClass, "mt-12 px-3 flex-none-auto")}>
-            <label htmlFor={id} className={"mb-5 text-sm text-title font-semibold font-(family-name:--font-montserrat) leading-none inline-block"}>
+        <div className={clsx(widthClass, "max-md:mt-6 mt-12 px-3 flex-none-auto")}>
+            <label htmlFor={id} className={"max-sm:mb-3 mb-5 text-sm text-title font-semibold font-(family-name:--font-montserrat) leading-none inline-block"}>
                 { label }*
             </label>
             <span>

@@ -4,10 +4,8 @@ import { FcServices } from "react-icons/fc";
 import { Banner, Paragraph, Heading, SectionTitle, Button } from "@/components";
 
 const ServiceBanner: React.FC = () => {
-    const responsiveMargin = "max-sm:mx-2 max-md:mx-6 max-lg:mx-8"
-
     return (
-        <Banner margin={responsiveMargin} padding={"responsive-padding-banner"} align={"start"} justify={"between"} className={"max-lg:gap-12"}>
+        <Banner margin={"responsive-margin-banner"} padding={"responsive-padding-banner"} align={"start"} justify={"between"} className={"max-lg:gap-12"}>
             <div>
                 <SectionTitle text={"What I Do"} icon={<FcServices className={"w-6 h-6"} />} />
                 <Heading level={1} size={"custom"} className={"max-sm:mb-5 max-2xl:mb-6 mb-8 responsive-heading-size leading-tight"} >
