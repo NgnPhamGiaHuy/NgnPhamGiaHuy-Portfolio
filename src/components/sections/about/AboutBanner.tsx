@@ -25,7 +25,7 @@ const AboutBanner: React.FC = () => {
                 <img src={"/profile-img.png"} alt="Profile Image" className={"max-sm:w-62.5 max-2xl:w-70 max-2xl-mid:w-87.5 w-100 max-sm:h-62.5 max-2xl:h-70 max-2xl-mid:h-87.5 h-100 rounded-full"}/>
             </div>
             <div className={"text-center"}>
-                <Heading level={1} size={"custom"} align={"center"} className={"max-2xl-mid:mb-4 mb-5 max-sm:text-[1.75rem] max-2xl:text-[2.275rem] max-2xl-mid:text-[3.125rem] text-[3.4375rem] leading-tight"}>
+                <Heading level={1} size={"custom"} align={"center"} className={"max-2xl-mid:mb-4 mb-5 responsive-heading-size leading-tight"}>
                     NgnPhamGiaHuy
                 </Heading>
                 <Heading level={2} size={"custom"} align={"center"} fontWeight={"normal"} className={"max-sm:text-sm text-base leading-normal"}>

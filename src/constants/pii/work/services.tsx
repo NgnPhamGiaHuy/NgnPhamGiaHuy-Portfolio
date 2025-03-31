@@ -5,22 +5,22 @@ import { ServiceProps } from "@/types";
 
 export const PII_SERVICES: ServiceProps[] = [
     {
-        icon: <SiMaterialdesignicons className={"w-12 h-12 text-text"} />,
+        icon: <SiMaterialdesignicons className={"w-10 h-10 max-w-10 min-w-10 max-h-10 min-h-10 text-text"} />,
         title: "Product Design",
         list: ["Lorem ipsum dolor sit amet", "Lorem ipsum dolor sit amet", "Lorem ipsum dolor sit amet"]
     },
     {
-        icon: <SiMaterialdesignicons className={"w-12 h-12 text-text"} />,
+        icon: <SiMaterialdesignicons className={"w-10 h-10 max-w-10 min-w-10 max-h-10 min-h-10 text-text"} />,
         title: "Product Design",
         list: ["Lorem ipsum dolor sit amet", "Lorem ipsum dolor sit amet", "Lorem ipsum dolor sit amet"]
     },
     {
-        icon: <SiMaterialdesignicons className={"w-12 h-12 text-text"} />,
+        icon: <SiMaterialdesignicons className={"w-10 h-10 max-w-10 min-w-10 max-h-10 min-h-10 text-text"} />,
         title: "Product Design",
         list: ["Lorem ipsum dolor sit amet", "Lorem ipsum dolor sit amet", "Lorem ipsum dolor sit amet"]
     },
     {
-        icon: <SiMaterialdesignicons className={"w-12 h-12 text-text"} />,
+        icon: <SiMaterialdesignicons className={"w-10 h-10 max-w-10 min-w-10 max-h-10 min-h-10 text-text"} />,
         title: "Product Design",
         list: ["Lorem ipsum dolor sit amet", "Lorem ipsum dolor sit amet", "Lorem ipsum dolor sit amet"]
     },
