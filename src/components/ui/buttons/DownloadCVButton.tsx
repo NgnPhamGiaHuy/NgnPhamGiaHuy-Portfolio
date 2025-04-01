@@ -16,7 +16,7 @@ const DownloadCVButton: React.FC<LinkButtonProps> = React.memo(({ fileName, colo
     const handleClick = useCallback(() => handleDownloadCV({ fileName }), [fileName]);
 
     return (
-        <Button color={color} size={size} className={clsx(className, "download-cv-button-after hover:after:bg-primary-1")} onClick={handleClick}>
+        <Button color={color} size={size} className={clsx(className, "download-button-after hover:after:bg-primary-1")} onClick={handleClick}>
             { children }
         </Button>
     );

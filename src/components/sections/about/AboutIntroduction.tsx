@@ -7,7 +7,7 @@ import { AboutStatsSection, Heading, Paragraph } from "@/components";
 const AboutIntroduction: React.FC = () => {
     return (
         <div>
-            <Heading level={3} size={"custom"} fontWeight={"medium"} className={"max-sm:text-[1.625rem] max-xl:text-[1.75rem] max-2xl:text-[2rem] text-[2.1875rem] about-heading-before leading-snug inline-block relative"}>
+            <Heading level={3} size={"custom"} fontWeight={"medium"} className={"heading-underline heading-tertiary-text leading-snug inline-block relative"}>
                 About Me
             </Heading>
             <Paragraph size={"custom"} className={"max-w-240 mt-8 max-sm:text-sm text-base leading-8"}>

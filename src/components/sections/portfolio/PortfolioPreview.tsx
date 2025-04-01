@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { PortfolioProps } from "@/types";
 
@@ -23,11 +24,13 @@ const PortfolioPreview: React.FC<PortfolioPreviewProps> = ({ portfolios, hovered
                     className={`${hoveredIndex === index ? "block qodef-animate-image-in" : "hidden"} relative`}
                 >
                     <div className="max-xl:min-h-125 max-2xl:min-h-150 min-h-190 h-full top-0 left-0 relative">
-                        <img
-                            src="/portfolio_demo.png"
-                            alt="Portfolio Demo"
-                            className="max-xl:max-w-112 max-2xl:max-w-126 max-w-144 max-h-190 h-full border-3 border-t-20 border-r-20 border-solid border-primary-2 rounded-[95rem] object-cover relative z-[15]"
-                        />
+                        <Image
+                            src={"/portfolio_demo.png"}
+                            alt={"Portfolio Demo"}
+                            width={1280}
+                            height={1280}
+                            priority
+                            className={"max-xl:max-w-112 max-2xl:max-w-126 max-w-144 max-h-190 h-full border-3 border-t-20 border-r-20 border-solid border-primary-2 rounded-[95rem] object-cover relative z-[15]"}/>
                     </div>
                 </motion.li>
             )) }

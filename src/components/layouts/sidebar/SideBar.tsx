@@ -30,7 +30,7 @@ const SideBar: React.FC<SideBarProps> = React.memo(({ list }) => {
                 </div>
             </Link>
             <div className={"w-10 h-8 flex-center border border-l-0 border-solid border-primary-2 cursor-pointer"}>
-                <RiMoonClearLine className={"w-6 h-6"} />
+                <RiMoonClearLine className={"size-6"} />
             </div>
             <ul>{socialLinks}</ul>
         </div>

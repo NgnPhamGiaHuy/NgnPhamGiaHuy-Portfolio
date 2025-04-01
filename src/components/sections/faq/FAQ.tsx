@@ -1,15 +1,15 @@
 import React from "react";
 
-import { FAQBanner, FAQContent } from "@/components";
+import { Banner, FAQBanner, FAQContent } from "@/components";
 
 const FAQ: React.FC = () => {
     return (
         <div>
-            <div className={"max-w-full w-full flex flex-row relative"}>
-                <div className={"max-w-full w-2/5 relative"}>
+            <div className={"section-container"}>
+                <Banner align={"start"} justify={"between"}>
                     <FAQBanner />
-                </div>
-                <div className={"max-w-full w-3/5 h-full pt-16 pr-40 pb-36 pl-30 flex flex-col grow-0 shrink basis-auto relative"}>
+                </Banner>
+                <div className={"section-content-large"}>
                     <FAQContent />
                 </div>
             </div>

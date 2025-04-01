@@ -1,15 +1,15 @@
 import React from "react";
 
-import { ServiceBanner, ServiceContent } from "@/components";
+import { Banner, ServiceBanner, ServiceContent } from "@/components";
 
 const Service: React.FC = () => {
     return (
         <div>
-            <div className={"max-w-full w-full flex max-lg:flex-col flex-row max-lg:gap-12 relative"}>
-                <div className={"max-w-full max-lg:w-full w-2/5 relative"}>
+            <div className={"section-container"}>
+                <Banner align={"start"} justify={"between"} className={"max-lg:gap-12"}>
                     <ServiceBanner />
-                </div>
-                <div className={"max-w-full max-lg:w-full w-3/5 h-full flex flex-col grow-0 shrink basis-auto relative"}>
+                </Banner>
+                <div className={"section-content-large"}>
                     <ServiceContent />
                 </div>
             </div>

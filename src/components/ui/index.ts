@@ -15,5 +15,6 @@ export { default as SkillItem } from "./skill/SkillItem";
 export { default as SocialLinkItem } from "./social/SocialLinkItem";
 export { default as SocialLinks } from "./social/SocialLinks";
 export { default as TestimonialItem } from "./testimonial/TestimonialItem";
+export { default as TestimonialList } from "./testimonial/TestimonialList";
 export { default as Heading } from "./typography/Heading";
 export { default as Paragraph } from "./typography/Paragraph";

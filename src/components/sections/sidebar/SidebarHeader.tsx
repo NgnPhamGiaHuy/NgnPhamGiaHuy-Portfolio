@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react';
+import React from "react";
 import Link from "next/link";
 import { FaXmark } from "react-icons/fa6";
 

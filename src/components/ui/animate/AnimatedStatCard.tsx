@@ -17,7 +17,7 @@ const AnimatedStatCard: React.FC<{ title:string, targetNumber: string }> = React
         <div className={"max-w-full max-xl:w-40 w-48"}>
             <div className={"flex flex-col-reverse items-stretch justify-center gap-2"}>
                 <div className={"flex-center flex-1"}>
-                    <span className={"max-sm:text-sm text-lg text-text max-xl:text-center font-normal font-(family-name:--font-montserrat) max-sm:leading-5 leading-8"}>
+                    <span className={"max-sm:text-sm text-lg text-text max-xl:text-center font-normal font-montserrat max-sm:leading-5 leading-8"}>
                         { title }
                     </span>
                 </div>

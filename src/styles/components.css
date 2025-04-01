@@ -1,17 +1,49 @@
 @layer components {
-    .responsive-heading-size {
+    .font-montserrat{
+        @apply font-(family-name:--font-montserrat)
+    }
+    
+    .heading-underline {
+        @apply before:w-4/5 before:h-[2px] before:left-0 before:bottom-[2px] before:bg-primary-2 before:absolute;
+    }
+    .heading-primary-text {
+        @apply max-sm:text-4xl max-md:text-[3.125rem] max-xl:text-[3.375rem] max-2xl:text-[3.625rem] max-2xl-mid:text-[5rem] text-[5.375rem]
+    }
+    .heading-secondary-text {
         @apply max-sm:text-[1.75rem] max-2xl:text-[2.275rem] max-2xl-mid:text-[3.125rem] text-[3.4375rem]
     }
-    .responsive-margin-banner {
+    .heading-tertiary-text {
+        @apply max-sm:text-[1.625rem] max-xl:text-[1.75rem] max-2xl:text-[2rem] text-[2.1875rem]
+    }
+    
+    .main-container {
+        @apply max-xl:max-w-full max-w-[calc(100%-82px)] w-full max-xl:ml-0 ml-20 relative
+    }
+    
+    .section-container {
+        @apply max-w-full w-full flex max-lg:flex-col flex-row max-lg:gap-12 relative
+    }
+    .section-content-large {
+        @apply max-w-full max-lg:w-full w-3/5 h-full flex flex-col grow-0 shrink basis-auto relative
+    }
+
+    .banner-margin-responsive {
         @apply max-sm:mx-2 max-md:mx-6 max-lg:mx-8
     }
-    .responsive-padding-banner {
+    
+    .home-padding-responsive {
+        @apply max-sm:pt-4 max-lg:pt-16 max-xl:pt-10 max-2xl:pt-8 max-2xl-high:pt-12 pt-28
+        max-sm:pr-0 max-md:pr-2 max-lg:pr-10 max-2xl-mid:pr-20 max-2xl-high:pr-32 pr-40
+        max-xl:pb-16 max-2xl-high:pb-24 pb-28
+        max-sm:pl-0 max-md:pl-2 max-lg:pl-10 max-2xl:pl-5 max-2xl-mid:pl-16 max-2xl-high:pl-28 pl-36
+    }
+    .banner-padding-responsive {
         @apply max-md:pt-12 pt-16
         max-sm:pr-3 max-md:pr-6 max-lg:pr-9 max-xl:pr-5 max-2xl:pr-6 pr-20
         max-md:pb-12 max-lg:pb-16 max-2xl:pb-50 pb-55
         max-sm:pl-3 max-md:pl-6 max-lg:pl-9 max-xl:pl-5 max-2xl:pl-6 pl-20;
     }
-    .responsive-padding-content {
+    .content-padding-responsive {
         @apply max-lg:pt-0 pt-16
         max-sm:pr-3 max-md:pr-6 max-lg:pr-9 max-2xl:pr-12 max-2xl-mid:pr-16 pr-32
         max-sm:pb-24 max-lg:pb-28 pb-36
@@ -22,9 +54,6 @@
     }
     .header-button-hover {
         @apply hover:after:h-full hover:after:top-[unset] hover:after:bottom-0;
-    }
-    .about-heading-before {
-        @apply before:w-4/5 before:h-[2px] before:left-0 before:bottom-[2px] before:bg-primary-2 before:absolute;
     }
     .about-button {
         @apply w-full pb-4 flex items-center justify-between text-title text-left font-medium font-(family-name:--font-unbounded) uppercase border-b-2 border-solid border-primary-2 leading-normal relative cursor-pointer;
@@ -41,7 +70,7 @@
     .about-button-after-active {
         @apply after:content-["\2b"] after:rotate-360 after:transition-all after:duration-750;
     }
-    .download-cv-button-after {
+    .download-button-after {
         @apply after:max-sm:w-6 after:w-8 after:h-[1px] after:top-1/2 after:max-sm:-right-6 after:-right-8 after:-translate-y-1/2 after:absolute;
     }
 }

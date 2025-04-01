@@ -1,5 +1,5 @@
 import clsx from "clsx"
-import React from 'react';
+import React from "react";
 import Link from "next/link";
 
 import { Heading } from "@/components";
@@ -12,11 +12,11 @@ const ContactBannerItem : React.FC<{ item: ContactItemProps, isLastIndex: boolea
                 { item.title }
             </Heading>
             <div className={"flex flex-row items-center gap-4"}>
-                <div className={"max-w-10 min-w-10 w-10 max-h-10 min-h-10 h-10 flex-center text-title border border-solid border-primary-2 bg-[#FBDACF] rounded-full relative before:w-10 before:h-10 before:-bottom-1 before:-right-1 before:rounded-full before:bg-primary-2/30 before:z-[-1] before:absolute"}>
+                <div className={"max-w-10 min-w-10 max-h-10 min-h-10 size-10 flex-center text-title border border-solid border-primary-2 bg-[#FBDACF] rounded-full relative before:w-10 before:h-10 before:-bottom-1 before:-right-1 before:rounded-full before:bg-primary-2/30 before:z-[-1] before:absolute"}>
                     { item.icon }
                 </div>
                 <div>
-                    <span className={"mb-1 text-xs text-title font-medium font-(family-name:--font-montserrat) leading-none block"}>
+                    <span className={"mb-1 text-xs text-title font-medium font-montserrat leading-none block"}>
                         { item.label }
                     </span>
                     <Link href={item.href} legacyBehavior>

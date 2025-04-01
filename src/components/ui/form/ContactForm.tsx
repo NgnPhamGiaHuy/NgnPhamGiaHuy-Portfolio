@@ -33,7 +33,7 @@ const ContactForm: React.FC = () => {
                 <div className={"pt-6 flex flex-row items-center gap-2"}>
                     <input type="checkbox" id={"confirm"} />
                     <span>
-                        <label htmlFor={"confirm"} className={"text-base text-text font-medium font-(family-name:--font-montserrat) leading-tight cursor-pointer"}>
+                        <label htmlFor={"confirm"} className={"text-base text-text font-medium font-montserrat leading-tight cursor-pointer"}>
                             Accept the terms and conditions
                         </label>
                     </span>

@@ -28,10 +28,10 @@ const Header: React.FC<{ activeLink: string; onClose: () => void }> = React.memo
             <ul className={"w-full max-xl:hidden flex-center list-none"}>{navItems}</ul>
             <div className={"max-xl:flex max-xl:items-center max-xl:gap-5 hidden"}>
                 <div className={"flex-center text-title cursor-pointer transition-all duration-500 hover:text-primary-1 z-[1000]"}>
-                    <RiMoonClearLine className={"w-6 h-6"} />
+                    <RiMoonClearLine className={"size-6"} />
                 </div>
                 <div onClick={onClose} className={"flex-center text-title cursor-pointer transition-all duration-500 hover:text-primary-1 z-[1000]"}>
-                    <PiSquaresFourBold className={"w-6 h-6"} />
+                    <PiSquaresFourBold className={"size-6"} />
                 </div>
             </div>
         </div>

@@ -6,7 +6,7 @@ import { PERSONAL_IDENTIFIABLE_INFORMATION } from "@/constants";
 const AboutStatsSection: React.FC = () => {
     const { experienceYears, certificates, projects } = PERSONAL_IDENTIFIABLE_INFORMATION;
 
-    const cardList = useMemo(() => [
+    const cardList: {  title: string, targetNumber: string }[] = useMemo(() => [
         { title: "Years Of Experience", targetNumber: experienceYears },
         { title: "Certificates received", targetNumber: certificates.length.toString() },
         { title: "Projects Complete", targetNumber: projects.length.toString() },
