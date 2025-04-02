@@ -7,10 +7,21 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "export-components": "node scripts/generateExports.ts",
-        "export-types": "node scripts/generateTypeExports.ts",
-        "export-constants": "node scripts/generateConstantExports.ts",
-        "export-all": "npm run export-components && npm run export-types && npm run export-constants"
+        "export-all": "ts-node scripts/exports/generateExports.ts",
+        "export-watch": "ts-node scripts/exports/generateExports.ts --watch",
+        "export-components": "ts-node scripts/exports/generateExports.ts components",
+        "export-types": "ts-node scripts/exports/generateExports.ts types",
+        "export-constants": "ts-node scripts/exports/generateExports.ts constants",
+        "export-lib": "ts-node scripts/exports/generateExports.ts lib",
+        "export-hooks": "ts-node scripts/exports/generateExports.ts hooks",
+        "export-utils": "ts-node scripts/exports/generateExports.ts utils",
+        "predev": "npm run export-all",
+        "prebuild": "npm run export-all",
+        "type-check": "ts-node scripts/dev/checkTypes.ts",
+        "analyze": "ts-node scripts/build/analyze.ts",
+        "check-deps": "ts-node scripts/ci/checkDependencies.ts",
+        "validate": "npm run type-check && npm run lint && npm run check-deps",
+        "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\""
     },
     "dependencies": {
         "@fortawesome/fontawesome-free": "^6.7.2",
@@ -25,12 +36,13 @@
         "@vercel/analytics": "^1.5.0",
         "axios": "^1.8.4",
         "better-sqlite3": "^11.9.1",
+        "chalk": "^5.4.1",
+        "clsx": "^2.1.1",
         "date-fns": "^4.1.0",
         "depcheck": "^1.4.7",
         "framer-motion": "^12.5.0",
         "next": "^15.2.3",
         "next-seo": "^6.6.0",
-        "nodemailer": "^6.10.0",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
         "react-google-recaptcha": "^3.1.0",
@@ -49,6 +61,10 @@
         "eslint": "^9",
         "eslint-config-next": "15.2.3",
         "tailwindcss": "^4",
+        "ts-node": "^10.9.2",
         "typescript": "^5.8.2"
+    },
+    "optionalDependencies": {
+        "chokidar": "^3.5.3"
     }
 }

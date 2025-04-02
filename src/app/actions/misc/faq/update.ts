@@ -26,7 +26,7 @@ export const updateFaq = async (
         stmt.run(question, answer, category, display_order, is_active, id);
         return { success: true };
     } catch (error) {
-        return { error: "Failed to update FAQ" };
+        return { error: "Failed to update Faq" };
     }
 };
 
@@ -39,7 +39,7 @@ export const updateFaqQuestion = async (
         stmt.run(question, id);
         return { success: true };
     } catch (error) {
-        return { error: "Failed to update FAQ question" };
+        return { error: "Failed to update Faq question" };
     }
 };
 
@@ -52,7 +52,7 @@ export const updateFaqAnswer = async (
         stmt.run(answer, id);
         return { success: true };
     } catch (error) {
-        return { error: "Failed to update FAQ answer" };
+        return { error: "Failed to update Faq answer" };
     }
 };
 
@@ -65,7 +65,7 @@ export const updateFaqCategory = async (
         stmt.run(category, id);
         return { success: true };
     } catch (error) {
-        return { error: "Failed to update FAQ category" };
+        return { error: "Failed to update Faq category" };
     }
 };
 
@@ -78,7 +78,7 @@ export const updateFaqDisplayOrder = async (
         stmt.run(display_order, id);
         return { success: true };
     } catch (error) {
-        return { error: "Failed to update FAQ display order" };
+        return { error: "Failed to update Faq display order" };
     }
 };
 
@@ -91,6 +91,6 @@ export const updateFaqIsActive = async (
         stmt.run(is_active, id);
         return { success: true };
     } catch (error) {
-        return { error: "Failed to update FAQ active status" };
+        return { error: "Failed to update Faq active status" };
     }
 };

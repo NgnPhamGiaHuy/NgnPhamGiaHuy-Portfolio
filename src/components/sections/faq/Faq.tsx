@@ -1,20 +1,20 @@
 import React from "react";
 
-import { Banner, FAQBanner, FAQContent } from "@/components";
+import { Banner, FaqBanner, FaqContent } from "@/components";
 
-const FAQ: React.FC = () => {
+const Faq: React.FC = () => {
     return (
         <div>
             <div className={"section-container"}>
                 <Banner align={"start"} justify={"between"}>
-                    <FAQBanner />
+                    <FaqBanner />
                 </Banner>
                 <div className={"section-content-large"}>
-                    <FAQContent />
+                    <FaqContent />
                 </div>
             </div>
         </div>
     );
 };
 
-export default FAQ;
+export default Faq;

@@ -1,22 +1,44 @@
-// Misc
-export * from "./misc/faq";
-
-// Social
-export * from "./social/contact";
-export * from "./social/social-profile";
-
-// Work
-export * from "./work/portfolio";
-export * from "./work/service";
-
-// Professional
-export * from "./professional/skill";
-export * from "./professional/education";
-export * from "./professional/project";
-export * from "./professional/experience";
-export * from "./professional/certificate";
-
-// Basic
-export * from "./basic/user";
-
-// Export other action files as they are created
+export * from "./basic/user/create";
+export * from "./basic/user/delete";
+export * from "./basic/user/read";
+export * from "./basic/user/update";
+export * from "./misc/faq/create";
+export * from "./misc/faq/delete";
+export * from "./misc/faq/read";
+export * from "./misc/faq/update";
+export * from "./professional/certificate/create";
+export * from "./professional/certificate/delete";
+export * from "./professional/certificate/read";
+export * from "./professional/certificate/update";
+export * from "./professional/education/create";
+export * from "./professional/education/delete";
+export * from "./professional/education/read";
+export * from "./professional/education/update";
+export * from "./professional/experience/create";
+export * from "./professional/experience/delete";
+export * from "./professional/experience/read";
+export * from "./professional/experience/update";
+export * from "./professional/project/create";
+export * from "./professional/project/delete";
+export * from "./professional/project/read";
+export * from "./professional/project/update";
+export * from "./professional/skill/create";
+export * from "./professional/skill/delete";
+export * from "./professional/skill/read";
+export * from "./professional/skill/update";
+export * from "./social/contact/create";
+export * from "./social/contact/delete";
+export * from "./social/contact/read";
+export * from "./social/contact/update";
+export * from "./social/social-profile/create";
+export * from "./social/social-profile/delete";
+export * from "./social/social-profile/read";
+export * from "./social/social-profile/update";
+export * from "./work/portfolio/create";
+export * from "./work/portfolio/delete";
+export * from "./work/portfolio/read";
+export * from "./work/portfolio/update";
+export * from "./work/service/create";
+export * from "./work/service/delete";
+export * from "./work/service/read";
+export * from "./work/service/update";
