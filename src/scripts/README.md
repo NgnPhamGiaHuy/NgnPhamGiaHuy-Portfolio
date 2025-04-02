@@ -39,9 +39,23 @@ The export generation system automatically manages module exports throughout the
 - ✨ Supports both default and named exports
 - 📝 Handles various file types (ts, tsx, js, jsx)
 - 🎯 Maintains proper export names from constants
-- 📂 Generates index files for nested directories
-- 👀 Auto-watches for file changes
+- 📂 Generates a single index.ts file for each main directory (components, types, etc.)
+- 📊 Recursively collects exports from all subdirectories
+- 👀 Auto-watches for file changes in all nested folders
 - 🎨 Supports selective directory processing
+- 📝 Includes summary mode for cleaner logging output
+
+</details>
+
+<details>
+<summary><strong>Behavior</strong></summary>
+
+- Creates a single `index.ts` file in each main directory (components, utils, hooks, etc.)
+- Collects all exports from all subdirectories recursively
+- Does not create individual index.ts files in subdirectories
+- File exports follow the structure: `export { default as ComponentName } from "./subdirectory/ComponentName";`
+- When running in watch mode with `--summary` flag, provides concise logging
+- Automatically detects new files, changes, and deletions
 
 </details>
 
@@ -131,6 +145,8 @@ The following checks run automatically:
 - 👀 Run `export-watch` during development for automatic export updates
 - 🎯 Use specific export commands when working on particular sections
 - ✅ Always run `export-all` before commits
+- 📊 Use `--summary` flag for cleaner output during watch mode
+- 📂 Remember that only main directories will contain index.ts files
 
 ### 🛡️ Type Safety
 
@@ -166,6 +182,13 @@ npm run export-{dir}
 
 # Check file naming conventions if exports aren't detected
 ```
+
+#### Troubleshooting Export Generation
+
+- 🔍 Make sure your components have proper exports (default or named)
+- 📂 Remember that index.ts files are only created in main directories
+- 🔄 If you see no logs during file changes, ensure the file is in a watched directory
+- 📝 For verbose logs, remove the `--summary` flag from the export-watch script
 
 ### ⚠️ Type Checking Failures
 

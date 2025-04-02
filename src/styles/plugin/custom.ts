@@ -5,6 +5,7 @@
  * overflow handling, and full-sized absolute positioning.
  */
 
+// @ts-ignore
 import plugin, { PluginAPI } from "tailwindcss/plugin";
 
 /**
