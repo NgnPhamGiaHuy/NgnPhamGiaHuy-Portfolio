@@ -1,7 +1,7 @@
 import React from "react";
 
 /**
-    * Interface for service item properties
+    * Interface for service slug properties
     * @interface ServiceProps
     * @property {React.ReactNode} icon - The icon component to display for the service
     * @property {string} title - The title of the service

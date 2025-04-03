@@ -48,7 +48,7 @@ const FaqContent: React.FC = () => {
                                         {item.question}
                                     </button>
                                 </Heading>
-                                <Paragraph size="custom" className="max-sm:text-sm text-base leading-[1.8]">
+                                <Paragraph size={"custom"} className={"max-sm:text-sm text-base leading-[1.8]"}>
                                     {item.answer}
                                 </Paragraph>
                             </MemoizedCollapsibleItem>

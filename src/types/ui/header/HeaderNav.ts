@@ -1,8 +1,8 @@
 /**
- * Interface for header navigation item properties
+ * Interface for header navigation slug properties
  * @interface HeaderNavProps
- * @property {string} link - The URL or path that the navigation item links to
- * @property {string} title - The display text for the navigation item
+ * @property {string} link - The URL or path that the navigation slug links to
+ * @property {string} title - The display text for the navigation slug
  */
 export interface HeaderNavProps {
     link: string;

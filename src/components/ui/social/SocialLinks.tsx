@@ -1,22 +1,17 @@
-import React from "react";
+import React from 'react';
 import Link from "next/link";
+import { FaFacebookF } from "react-icons/fa6";
 
-import { SocialProfilesProps } from "@/types";
-import { PERSONAL_IDENTIFIABLE_INFORMATION } from "@/constants";
-
-const SocialLinks: React.FC = () => {
-    const socialProfiles: SocialProfilesProps[] = PERSONAL_IDENTIFIABLE_INFORMATION.socialProfiles;
-
+const SocialLinks : React.FC = () => {
     return (
-        <ul className={"flex flex-wrap items-center gap-4"}>
-            { socialProfiles.map((value: SocialProfilesProps, index: number) => (
+        <ul className={"flex items-center gap-8 leading-none"}>
+            {[1, 2, 3].map((value, index) => (
                 <li key={index}>
-                    <Link href={value.url} className={"px-4 py-2 flex items-center  text-sm text-title font-montserrat font-semibold border border-solid border-border rounded-[3.125rem] leading-none gap-4"}>
-                        { value.icon }
-                        { value.title }
+                    <Link href={"/src/public"}>
+                        <FaFacebookF className={"w-3 h-3 text-text hover:text-primary-1 transition-all"}/>
                     </Link>
                 </li>
-            )) }
+            ))}
         </ul>
     );
 };

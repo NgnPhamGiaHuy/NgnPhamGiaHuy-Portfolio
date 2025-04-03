@@ -5,7 +5,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 
 import { CONTACTS } from "@/constants";
 import { ContactItemProps } from "@/types";
-import { ContactItem, Heading, SidebarHeader, SidebarMenuList, SocialLinks } from "@/components";
+import { ContactItem, Heading, SidebarHeader, SidebarMenuList, SocialCircleLinks } from "@/components";
 
 const SideBarMenu: React.FC<{ activeLink: string, isOpen: boolean, onClose: () => void }> = ({ activeLink, isOpen, onClose }) => {
     const containerVariants = {
@@ -62,7 +62,7 @@ const SideBarMenu: React.FC<{ activeLink: string, isOpen: boolean, onClose: () =
                                 Social Link
                                 <FiArrowUpRight className={"w-4 h-4 ml-1"}/>
                             </Heading>
-                            <SocialLinks/>
+                            <SocialCircleLinks/>
                         </div>
                     </motion.div>
                 </div>
