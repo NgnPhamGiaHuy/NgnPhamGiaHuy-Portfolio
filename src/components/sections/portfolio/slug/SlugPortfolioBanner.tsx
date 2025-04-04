@@ -1,23 +1,23 @@
 import React from 'react';
 import Link from "next/link";
 
-const SlugPortfolioBanner: React.FC = () => {
+const SlugPortfolioBanner: React.FC<{ pathname : string }> = ({ pathname }) => {
     return (
-        <div className={"min-h-screen sticky top-0"}>
-            <div className={"py-4 px-12"}>
+        <div className={"max-lg:min-h-[unset] min-h-screen sticky top-0"}>
+            <div className={"max-sm:px-2 max-xl:px-10 px-12 max-xl:py-4 py-5"}>
                 <ul className={"flex items-center text-base text-text font-medium font-montserrat gap-4 leading-none"}>
                     <li>
-                        <Link href={"/src/public"} className={"text-title"}>
+                        <Link href={"/"} className={"text-title"}>
                             Home
                         </Link>
                     </li>
                     <li className={"pl-4 relative dot-before"}>
-                        Software Agency
+                        { pathname }
                     </li>
                 </ul>
             </div>
-            <div className={"min-h-screen"}>
-                <img src="/pexels-chrissiegiann-28982067-1.png" alt="Background" className={"max-w-full w-full min-h-screen h-auto object-cover"}/>
+            <div className={"max-sm:px-2 max-lg:px-8 max-lg:min-h-[unset] min-h-screen"}>
+                <img src="/pexels-chrissiegiann-28982067-1.png" alt="Background" className={"max-w-full w-full max-lg:max-h-[38rem] max-lg:min-h-[unset] min-h-screen h-auto object-cover"}/>
             </div>
         </div>
     );

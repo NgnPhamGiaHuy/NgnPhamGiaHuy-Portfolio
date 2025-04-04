@@ -31,7 +31,7 @@
         @apply max-sm:mx-2 max-md:mx-6 max-lg:mx-8
     }
     .dot-before {
-        @apply before:w-1 before:h-1 before:top-1/2 before:left-0 before:-translate-y-1/2 before:bg-primary-1 before:rounded-full before:absolute
+        @apply before:w-[6px] before:h-[6px] before:top-1/2 before:left-0 before:-translate-y-1/2 before:bg-primary-1 before:rounded-full before:absolute
     }
     .home-padding-responsive {
         @apply max-sm:pt-4 max-lg:pt-16 max-xl:pt-10 max-2xl:pt-8 max-2xl-high:pt-12 pt-28

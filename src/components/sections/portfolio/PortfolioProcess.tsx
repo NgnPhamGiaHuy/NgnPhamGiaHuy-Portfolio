@@ -8,8 +8,8 @@ const PortfolioProcess = () => {
         <PortfolioWrapper title={"My Process"}>
             <div className={"-mt-4 -mx-2 flex flex-wrap"}>
                 { [1, 2, 3].map((value, index) => (
-                    <div key={index} className={"w-1/3 mt-4 px-2 flex-none-auto"}>
-                        <div className={"pt-4 pr-4 pb-8 pl-8 bg-dark-white rounded-4xl border-r-4 border-b-4 border-solid border-primary-2 hover:border-primary-1 transition-all group"}>
+                    <div key={index} className={"max-sm:w-full max-md:w-1/2 max-lg:w-1/3 max-xl:w-1/2  w-1/3 mt-4 px-2 flex-none-auto"}>
+                        <div className={"pt-4 pr-4 pb-8 max-lg:pl-6 pl-8 bg-dark-white rounded-4xl border-r-4 border-b-4 border-solid border-primary-2 hover:border-primary-1 transition-all group"}>
                             <div className={"mb-2 flex-between gap-4"}>
                                 <span className={"text-base text-primary-1 font-normal leading-none"}>
                                     Step 01

@@ -16,16 +16,16 @@ const SlugPortfolioContent: React.FC = () => {
                             Proin egestas ex sapien, non porta lectus lobortis ac. Vestibulum ante ipsum primis in faucibus orci luctus en ultrices posuere cubilia curae; Nullam finibus turpis turpis, a imperdiet orci ornare sedat. Quisque scelerisque libero diam, nec gravida mi placerat vel. Vestibulum ut nunc sed nunc molestie congue. Cras eget nisl inholet lorem facilisis viverra sed sit amet massa. Duisonabat fringilla consectetur turpis, quis dictum tellus interdum condimentum. In hac habitasse platea dictumst. Sed ut ultrices eros, eu tincidunt ex. Nunc in gravida nibh, vestibulum egestas purus. In nibh sapien, convallis nec pellentesque ac, rutrum nec diam
                         </Paragraph>
                     </PortfolioWrapper>
-                    <div className={"mt-4 flex flex-row gap-6"}>
-                        <div className={"w-1/2 flex flex-col"}>
+                    <div className={"mt-4 flex flex-row max-md:flex-wrap gap-6"}>
+                        <div className={"max-md:w-full w-1/2 flex flex-col"}>
                             <img src="/portfolio-details-img2-1.jpg" alt="Imagine" className={"w-full h-auto rounded-tl-[6.25rem] rounded-tr-md rounded-br-[6.25rem] rounded-bl-md object-cover"}/>
                         </div>
-                        <div className={"w-2/5 flex flex-col"}>
+                        <div className={"max-md:w-full w-2/5 flex flex-col"}>
                             <img src="/portfolio-details-img2-1.jpg" alt="Imagine" className={"w-full h-auto rounded-tr-[6.25rem] rounded-tl-md rounded-bl-[6.25rem] rounded-br-md object-cover"}/>
                         </div>
                     </div>
                 </div>
-                <div className={"pt-16 flex-between flex-wrap gap-5"}>
+                <div className={"max-md:pt-10 pt-16 flex-between flex-wrap gap-5"}>
                     <Tags/>
                     <SocialLinks/>
                 </div>
